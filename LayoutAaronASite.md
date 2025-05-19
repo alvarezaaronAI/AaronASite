@@ -1,160 +1,161 @@
-────────────────────────────────────────────────────────────────
-NAVIGATION BAR (sticky at top, full-width)
-────────────────────────────────────────────────────────────────
-• Logo (Left): Aaron Alvarez  
-• Links (Right):
-    └ Home | About | Projects | Skills | Education | Testimonials | Blog | Contact  
-• “Hire Me” Button (Right-most, grayed out, disabled)
+──────────────────────────────────────────────────────────────
+NAVIGATION BAR (sticky atop, full-width)
+──────────────────────────────────────────────────────────────
+• Logo: “Aaron Alvarez” (left)  
+• Hamburger toggle (visible on small screens)  
+• Links (hidden on small, inline md+):
+    Home | About | Projects | Skills | Education | Testimonials | Blog | Contact  
+• “Hire Me” button (always disabled, grayed out, right)  
 
-────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────
 HERO SECTION (#hero)
-────────────────────────────────────────────────────────────────
-• Full-width background image (Brooklyn Bridge.jpg, dark overlay gradient)  
-• Centered overlay card:
-    ├ Heading: “Go Hard 2.0” (5xl / 6xl, white)  
-    ├ Subheading: “Elevating brands with clean code and creative design.” (lg / xl, gray-200)  
-    ├ Stats Pills (in green on black/60 card):
-    │   • 5+ Projects  
-    │   • 3 Case Studies  
-    │   • 10k+ Hours  
-    │   • 8+ Clients  
-    │   • 12+ Countries  
-    └ (No buttons)
+──────────────────────────────────────────────────────────────
+• Full-width background: “Brooklyn Bridge.jpg” with dark gradient overlay  
+• Centered card (black/60):
+    ├ Heading: “Turning Ideas into Interactive Digital Stories” (5xl/6xl, white)  
+    ├ Subheading: “Elevating brands with clean code and creative design.” (lg/xl, gray-200)  
+    └ Stats row (green pills, black text, flex wrap):
+        • <i class="fas fa-code"></i> 5+ Projects  
+        • <i class="fas fa-file-alt"></i> 3 Case Studies  
+        • <i class="fas fa-clock"></i> 10k+ Hours  
+        • <i class="fas fa-users"></i> 8+ Clients  
+        • <i class="fas fa-globe"></i> 12+ Countries  
 
-────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────
 ABOUT & TILES (#about)
-────────────────────────────────────────────────────────────────
-Layout: 3-column on desktop, stacked on mobile  
-┌────────────────────────┬────────────────────────────────┬────────────────────────┐  
-│ Left Pane (1/5 width) │ Center “About Me” Card (3/5) │ Right Pane (1/5)      │  
-│                        │                                │ Spotify Mini-Player   │  
-│ • Article 1 Tile      │ • Portrait (Aaron Alvarez.jpeg) │  (Go Hard 2.0 track)  │  
-│   – Title, excerpt,   │ • “Hi, I’m Aaron” header      │ • Green border & bg   │  
-│     “Read More →”     │ • Role badges: Software Eng,  │ • 100% width iframe   │  
-│ • Article 2 Tile      │   Vue, React, Android         │   height=380, rounded │  
-│ • Article 3 Tile      │ • Bio text (centered)         │ • border Spotify green│  
-│                        │ • Fun Fact: “Pour over coffee │                        │  
-│                        │   is my creative fuel. ☕️”     │                        │  
-│                        │ • Resume & Contact buttons    │                        │  
-│                        │ • “Vue/React conversion…” note│                        │  
-└────────────────────────┴────────────────────────────────┴────────────────────────┘  
+──────────────────────────────────────────────────────────────
+Layout: flex-col on mobile, flex-row on md+, gap-8, centered in 7xl container  
+┌───────────────────┬───────────────────────────────────┬──────────────────────┐  
+│ Left Pane (1/5)   │ Center “About Me” Card (3/5)      │ Right Pane (1/5)     │  
+│ (hidden on sm)    │                                   │ (hidden on sm)       │  
+│ • 3 Article Tiles │ • Portrait (circle, border & shadow)  
+│   – Title (green) │ • “Hi, I’m Aaron” header (4xl)     │ • Spotify embed      │  
+│   – Excerpt, “Read More →”  
+│                   │ • Role badges (green pills)        │   – track “Go Hard 2.0” by Juice WRLD  
+│                   │ • Bio paragraph (lg, center)      │   – border & subtle bg  
+│                   │ • Fun fact line                   │  
+│                   │ • Resume & Contact buttons        │  
+│                   │ • “Vue/React conversion…” note    │  
+└───────────────────┴───────────────────────────────────┴──────────────────────┘  
 
-────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────
 PROJECTS SECTION (#projects-combined)
-────────────────────────────────────────────────────────────────
-• Section title: “Projects” (centered, green)  
-• Two-column layout (wrap on mobile):
-
-  Left (Featured Project Card):
-    ├ Image (wide, rounded, shadow)  
-    ├ Title: “Project Title” (2xl, green)  
-    ├ Description (gray-200)  
-    ├ Meta:
-    │   • Role: Lead Developer  
-    │   • Date: Jan 2025  
-    ├ Key Features (bulleted, gray-300):
-    │   • Responsive, mobile-first design  
-    │   • Real-time data fetching & updates  
-    │   • Automated tests  
-    ├ Tech Stack badges (green pills): Vue.js, Tailwind CSS, Node.js, Firebase  
-    └ Links (green text): Live Demo | GitHub Repo | Case Study | Blog Post  
-
+──────────────────────────────────────────────────────────────
+Container: 7xl, bg-[#222326], rounded, px-4 py-12  
+• Title: “Projects” (3xl, green, bold, center-md)  
+• Two-column flex (col on sm, row md+, gap-12):
+  
+  Left (Featured Project):
+    ├ Background card (black/90, blur, rounded):  
+    │  • Image (wide, rounded, shadow)  
+    │  • Title: “Project Title” (2xl, green)  
+    │  • Description (gray-200)  
+    │  • Meta (Role & Date, gray-200/green)  
+    │  • Bulleted features (gray-300)  
+    │  • Tech badges (green pills)  
+    │  • Links: Live Demo | GitHub Repo | Case Study | Blog Post  
+  
   Right (More Projects Grid):
-    • “More Projects” subtitle (xl, green)  
-    • 3-column grid of mini cards (wrap to 2 or 1 on smaller screens):
-      – Each card: image, title (green), description (gray-400)  
+    ├ Subtitle: “More Projects” (xl, green)  
+    └ Grid: 1col sm→2, md→2, lg→3, gap-6:
+       – 6 Mini cards (black/90, rounded, shadow):
+          • Image (object-cover)  
+          • Title (green)  
+          • Text (gray-400)  
 
-────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────
 SKILLS & TOOLS (#skills)
-────────────────────────────────────────────────────────────────
-Grid: 2 columns  
+──────────────────────────────────────────────────────────────
+Section bg[#222326], rounded, p-4, 7xl center  
+Title: “Skills & Tools” (3xl, green)  
+Grid: 1col sm→2, gap-4  
 
-  • Languages & Frameworks (card):
-      – Icon + heading (green)  
-      – Pills: HTML, CSS, JavaScript, Vue.js, React, Node.js  
+1. Languages & Frameworks (card):
+    • Heading icon + text (fa-code, green, xl)  
+    • Pills (green/20 bg, green text):
+      – HTML (fa-html5), CSS (fa-css3-alt), JavaScript (fa-js), Vue.js (fa-vuejs), React (fa-react), Node.js (fa-node-js)  
 
-  • Dev Tools (card):
-      – Icon + heading (green)  
-      – Pills: Git, GitHub, VS Code, Postman, Vite, NPM, Jira  
+2. Dev Tools (card):
+    • Heading icon + text (fa-tools)  
+    • Pills: Git (fa-git-alt), GitHub (fa-github), VS Code (fa-microsoft), Postman (fa-postman), Vite (fa-bolt), NPM (fa-npm), Jira (fa-jira)  
 
-  • Design Tools (card):
-      – Icon + heading (green)  
-      – Pills: Figma, Adobe XD, Penpot  
+3. Design Tools (card):
+    • Heading icon + text (fa-paint-brush)  
+    • Pills: Figma, Adobe XD, Penpot (all green/20 bg with simple SVG icons)  
 
-  • Soft Skills (card):
-      – Icon + heading (green)  
-      – Pills: Communication, Collaboration, Creative Problem Solving  
+4. Soft Skills (card):
+    • Heading icon + text (fa-smile)  
+    • Pills: Communication (fa-comments), Collaboration (fa-handshake), Creative Problem Solving (fa-lightbulb)  
 
-────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────
 EDUCATION & EXPERIENCE (#edu-exp)
-────────────────────────────────────────────────────────────────
-**Education**  
-  • B.S. Computer Science  
-    – California State University, Los Angeles  
-    – Graduated May 2020  
+──────────────────────────────────────────────────────────────
+Title: “Education & Experience” (3xl, green)  
 
-  • M.S. in Artificial Intelligence (planned)  
-    – University of Texas at Austin  
-    – Spring 2026  
-    – (Card grayed out, 50% opacity)  
+**Education**  
+Grid flex-col→row, gap-6, mb-12:
+• B.S. Computer Science (UCLA, May 2020) – card, fa-graduation-cap icon  
+• M.S. in AI (planned, UT Austin, Spring 2026) – grayed card, fa-graduation-cap  
 
 **Experience**  
-  • Row 1 (3 cols):
-    1. Manager II, Operations (Logistics) — Amazon AMZL, Glendale CA (Jan 2023–Apr 2025)  
-       • Built real-time web scraping tool…  
-       • Scaled dispatched units by 66%…  
-    2. Manager I, Operations (Logistics) — Amazon AMZL, Culver City CA (Apr 2021–Dec 2022)  
-       • Launched Prime Same-Day Shipping…  
-       • Reduced concessions by 15.4%…  
-    3. FC Associate I, Direct (Fulfillment) — Amazon Fresh, Glendale CA (Dec 2020–Apr 2021)  
-       • Picked, packed, staged grocery orders…  
+Grid 1→3 cols, gap-6:
 
-  • Row 2 (3 cols):
-    4. Delivery Associate I, Direct (Logistics) — Amazon AMZL, Commerce/South Gate CA (Jul 2018–Dec 2020)  
-       • Delivered 300+ packages daily…  
-    5. (Empty placeholder card)  
-    6. (Empty placeholder card)  
+Row 1:
+1. Manager II… (Jan 2023–Apr 2025) – fa-briefcase icon  
+2. Manager I… (Apr 2021–Dec 2022) – fa-briefcase  
+3. FC Associate I… (Dec 2020–Apr 2021) – fa-truck  
 
-────────────────────────────────────────────────────────────────
+Row 2:
+4. Delivery Associate I… (Jul 2018–Dec 2020) – fa-truck  
+5. (empty placeholder)  
+6. (empty placeholder)  
+
+──────────────────────────────────────────────────────────────
 TESTIMONIALS (#testimonials)
-────────────────────────────────────────────────────────────────
-Grid: 2 columns on desktop, 1 on mobile  
-  1. Sarah J., Founder — “Aaron brought our idea to life…”  
-  2. Mark L., Teammate — “Always on top of deadlines…”  
-  3. Alex G., Product Manager — spans full width on desktop —  
-     “Aaron’s attention to detail…”  
+──────────────────────────────────────────────────────────────
+Title: “What Clients & Peers Say” (3xl, green, center)  
+Grid 1→2 cols, gap-8:
 
-────────────────────────────────────────────────────────────────
+• Card 1 (Sarah J.) – avatar, name, role, quote, fa-quote-right icon  
+• Card 2 (Mark L.) – similarly  
+• Card 3 (Alex G., spans 2 cols)  
+
+──────────────────────────────────────────────────────────────
 BLOG / ARTICLES (#blog)
-────────────────────────────────────────────────────────────────
-Grid: 3 columns on desktop, 2 on tablet, 1 on mobile  
+──────────────────────────────────────────────────────────────
+Title: “Latest Articles” (3xl, green, center)  
+Grid 1→2→3 cols, gap-8:
 
-  • Card template (each):
-    – Image (16:9), rounded top  
-    – Date (sm, gray-500)  
-    – Title (green, semibold)  
-    – Excerpt (gray-300)  
-    – “Read More →” link (green underline on hover)  
+Cards: (3 shown)
+– Image (h-40, rounded top)  
+– Date (sm, gray-500)  
+– Title (green, semibold)  
+– Excerpt (gray-300)  
+– “Read More →” link (green, underline on hover)  
 
-  • Sample posts:
-    1. How I Built My Portfolio with Vue & Vite — Jan 15, 2025  
-    2. 5 Tips for Landing Freelance Dev Work in 2025 — Dec 10, 2024  
-    3. Why I Chose JavaScript After a 5-Year Break — Nov 03, 2024  
-
-────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────
 CONTACT SECTION (#contact)
-────────────────────────────────────────────────────────────────
-• Grayed out for now (50% opacity, no pointer events)  
-• Title: “Get in Touch” (green)  
-• Copy: “Have a project in mind? …”  
-• Form: Name, Email, Message, Send button  
+──────────────────────────────────────────────────────────────
+• Grayed out (50% opacity, pointer-events none)  
+• Title: “Get in Touch” (3xl, green, center)  
+• Subtitle text (gray-300, center)  
+• Form (max-w-xl center, grid gap-6):
+    – Name, Email inputs, Message textarea  
+    – Send button (green bg)  
 
-────────────────────────────────────────────────────────────────
-FOOTER (sticky bottom)
-────────────────────────────────────────────────────────────────
-• Back to Top link (green)  
-• Social links: LinkedIn | GitHub | Email  
-• Meta text (sm):
+──────────────────────────────────────────────────────────────
+FOOTER (relative)
+──────────────────────────────────────────────────────────────
+Container: bg-[#191414], text-gray-400, py-8, max-w-7xl center, flex col→row md, items-center, px-4  
+
+• Left: “Back to Top” link (green)  
+• Center: Social links: LinkedIn | GitHub | Email (hover white)  
+• Right: Meta text (sm):
     – © 2025 Aaron Alvarez — Built with HTML + CSS  
-    – “⚙️ Converting soon to Vue/React …”  
-• Corner note (green, xs): “Color theme inspired by Spotify — music to my code!”  
+    – “⚙️ Converting soon to Vue/React as part of my dev practice 💡”  
+    – Mobile-only credits & theme notes (green xs, visible md:hidden)  
+• Corner spans (hidden md:block):
+    – bottom-left: Credits: Font Awesome | Tailwind CSS | Spotify Embed | GitHub  
+    – bottom-right: Color theme inspired by Spotify — music to my code!  
+
+──────────────────────────────────────────────────────────────

@@ -1,145 +1,657 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aaron Alvarez | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p+U4T1WY3m9U1pQyp9dpKlt8DSXtaOxRSZ/5b5bhDMK4r4Tf2uFVhQVxzoq0aj2VwRSARjaRzOJ/1kIszp2+cw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body class="bg-[#191414] text-white font-sans">
 
   <!-- NAVIGATION BAR -->
-  <header>
-    <nav>
+  <header class="sticky top-0 bg-[#191414] p-4 shadow z-50">
+    <nav class="flex justify-between items-center max-w-7xl mx-auto text-white">
       <div>Aaron Alvarez</div>
-      <ul>
-        <li>Home</li>
-        <li>Projects</li>
-        <li>Skills</li>
-        <li>About Me</li>
-        <li>Resume</li>
-        <li>Blog</li>
-        <li>Contact</li>
+      <ul class="flex space-x-6 text-white">
+        <li><a href="#hero" class="hover:text-[#1DB954]">Home</a></li>
+        <li><a href="#about" class="hover:text-[#1DB954]">About</a></li>
+        <li><a href="#projects-combined" class="hover:text-[#1DB954]">Projects</a></li>
+        <li><a href="#skills" class="hover:text-[#1DB954]">Skills</a></li>
+        <li><a href="#edu-exp" class="hover:text-[#1DB954]">Education</a></li>
+        <li><a href="#testimonials" class="hover:text-[#1DB954]">Testimonials</a></li>
+        <li><a href="#blog" class="hover:text-[#1DB954]">Blog</a></li>
+        <li><a href="#contact" class="hover:text-[#1DB954]">Contact</a></li>
       </ul>
-      <button>Hire Me</button>
+      <button class="bg-gray-600 text-gray-400 px-4 py-2 rounded opacity-50 cursor-not-allowed">Hire Me</button>
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
-  <section id="hero">
-    <h1>Hi, I'm Aaron — I Build Thoughtful and Functional Web Apps</h1>
-    <p>Frontend Developer | JavaScript Enthusiast | Focused on Vue & Creative UX</p>
-    <button>Browse My Projects</button>
-    <p><em>🛠️ This website is currently static, but I'm actively converting it to Vue.js (and maybe React) as part of my learning journey.</em></p>
+  <!-- HERO SECTION: Wide, Tall, Card on Right -->
+  <section id="hero" class="relative flex items-center justify-center min-h-[750px] py-12 bg-[#191414]">
+    <div class="absolute inset-0 w-full h-full">
+      <img src="./Brooklyn Bridge.jpg" alt="Brooklyn Bridge" class="w-full h-full object-cover opacity-80">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/50"></div>
+    </div>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+      <div class="bg-black/60 p-6 rounded-lg">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-4 text-white">
+          Turning Ideas into Interactive Digital Stories
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200 mb-6">
+          Elevating brands with clean code and creative design.
+        </p>
+        <div class="mt-4 flex flex-wrap justify-center gap-4">
+          <span class="bg-[#1DB954] text-black px-4 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
+            <!-- Code Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
+            </svg>
+            5+ Projects
+          </span>
+          <span class="bg-[#1DB954] text-black px-4 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
+            <!-- Document Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10m-10 4h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2h-3m-6 0H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            3 Case Studies
+          </span>
+          <span class="bg-[#1DB954] text-black px-4 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
+            <!-- Clock Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            10k+ Hours
+          </span>
+          <span class="bg-[#1DB954] text-black px-4 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
+            <!-- User Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 15c2.761 0 5.303.894 7.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0zM19 6.5V10m0 0H15m4 0 4-3.5M5 6.5V10m0 0h4m-4 0L1 6.5"/>
+            </svg>
+            8+ Clients
+          </span>
+          <span class="bg-[#1DB954] text-black px-4 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
+            <!-- Globe Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 0v20m0-20a10 10 0 010 20M2 12h20"/>
+            </svg>
+            12+ Countries
+          </span>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- ABOUT ME -->
-  <section id="about-me">
-    <div>
-      <img src="https://via.placeholder.com/200" alt="Aaron Alvarez Photo">
+<!-- ABOUT & TILES SECTION -->
+<div class="max-w-7xl mx-auto mb-10 mt-12">
+  <div class="flex flex-col md:flex-row items-start gap-8">
+    <!-- Left: 3 Article Teasers -->
+    <div class="hidden md:grid grid-rows-3 gap-4 w-1/5">
+      <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-6">
+        <h4 class="text-[#1DB954] font-bold mb-2">Article 1</h4>
+        <p class="text-gray-300 text-sm mb-3">Crafting pixel-perfect UIs with Vue.js.</p>
+        <a href="#blog" class="text-[#1DB954] hover:underline font-semibold">Read More →</a>
+      </div>
+      <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-6">
+        <h4 class="text-[#1DB954] font-bold mb-2">Article 2</h4>
+        <p class="text-gray-300 text-sm mb-3">Building responsive layouts with Tailwind.</p>
+        <a href="#blog" class="text-[#1DB954] hover:underline font-semibold">Read More →</a>
+      </div>
+      <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-6">
+        <h4 class="text-[#1DB954] font-bold mb-2">Article 3</h4>
+        <p class="text-gray-300 text-sm mb-3">Optimizing performance in React apps.</p>
+        <a href="#blog" class="text-[#1DB954] hover:underline font-semibold">Read More →</a>
+      </div>
     </div>
-    <div>
-      <h2>About Me</h2>
-      <p>Short bio goes here...</p>
-      <p>Mission/Passion statement goes here...</p>
-      <p>Fun fact or hobbies here...</p>
-      <a href="#">Download My Resume</a>
-    </div>
-  </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div>
-      <h3>Project Title</h3>
-      <p>Short description of the project.</p>
-      <a href="#">Live Demo</a>
-      <a href="#">GitHub Repo</a>
-      <a href="#">Case Study</a>
+    <!-- Center: About Card (unchanged) -->
+    <div class="flex-1">
+      <div class="bg-[#222326]/90 backdrop-blur-lg rounded-3xl shadow-2xl px-10 py-12 w-full max-w-xl mx-auto flex flex-col items-center">
+        <img src="./Aaron Alvarez.jpeg" alt="Aaron Alvarez" class="rounded-full w-32 h-32 md:w-40 md:h-40 object-cover shadow-xl border-4 border-[#1DB954] mb-6">
+        <h1 class="text-4xl font-extrabold mb-3 text-white text-center">Hi, I'm Aaron</h1>
+        <div class="flex flex-wrap gap-2 mb-3 justify-center">
+          <span class="bg-[#1DB954] text-black px-3 py-1 rounded-full text-sm font-semibold">Software Engineer</span>
+          <span class="bg-[#1DB954] text-black px-3 py-1 rounded-full text-sm font-semibold">Vue</span>
+          <span class="bg-[#1DB954] text-black px-3 py-1 rounded-full text-sm font-semibold">React</span>
+          <span class="bg-[#1DB954] text-black px-3 py-1 rounded-full text-sm font-semibold">Android</span>
+        </div>
+        <p class="text-lg text-gray-200 mb-2 text-center">
+          I craft modern web apps with clean code and creative vision.<br>
+          Passionate about great interfaces and smooth workflows.
+        </p>
+        <p class="text-gray-200 mb-6 text-center">
+          <span class="font-medium text-[#1DB954]">Fun Fact:</span> Pour over coffee is my creative fuel. ☕️
+        </p>
+        <div class="flex gap-4 flex-col sm:flex-row w-full justify-center">
+          <a href="#" class="bg-[#1DB954] text-black px-7 py-3 rounded-lg font-semibold hover:bg-[#169443] text-center">Download My Resume</a>
+          <a href="#contact" class="border border-[#1DB954] text-[#1DB954] px-7 py-3 rounded-lg font-semibold hover:bg-[#191414] text-center">Contact Me</a>
+        </div>
+        <p class="mt-4 text-sm text-gray-400 italic text-center">🛠️ Vue/React conversion in progress!</p>
+      </div>
     </div>
-  </section>
+
+    <!-- Right: Spotify Mini Player -->
+    <div class="hidden md:flex flex-col w-1/5 bg-[#1DB954]/20 border-2 border-[#1DB954] backdrop-blur-md rounded-2xl shadow-md p-4 items-center justify-center">
+      <iframe
+        src="https://open.spotify.com/embed/track/1wSAAx6UHuQurUBHGM95og?utm_source=generator"
+        width="100%" height="380" frameborder="0" allow="encrypted-media"
+        class="rounded-lg"
+      ></iframe>
+    </div>
+  </div>
+</div>
+
+
+  <!-- START: Projects Section -->
+<section id="projects-combined" class="max-w-7xl mx-auto py-12 px-4 bg-[#222326] rounded-3xl mb-10 text-white">
+  <h2 class="text-[#1DB954] text-3xl font-bold mb-8">Projects</h2>
+  <div class="flex flex-col md:flex-row gap-12">
+    <!-- Featured Project (Left) -->
+    <div class="flex-1 w-full">
+      <div class="bg-[#222326]/90 backdrop-blur-lg rounded-3xl shadow-2xl p-8 flex flex-col">
+        <img src="https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg" alt="Project Screenshot" class="mb-6 rounded shadow-lg bg-black">
+        <h3 class="text-[#1DB954] text-2xl font-bold mb-2">Project Title</h3>
+        <p class="text-gray-200 mb-4">A concise summary of the project, highlighting its core goal and impact.</p>
+
+        <!-- Project Meta -->
+        <div class="mb-4 text-gray-200">
+          <span class="font-medium text-[#1DB954]">Role:</span> Lead Developer<br>
+          <span class="font-medium text-[#1DB954]">Date:</span> Jan 2025
+        </div>
+
+        <!-- Key Features -->
+        <ul class="list-disc list-inside text-gray-300 space-y-1 mb-4">
+          <li>Responsive, mobile-first design</li>
+          <li>Real-time data fetching & updates</li>
+          <li>Automated unit and integration tests</li>
+        </ul>
+
+        <!-- Tech Stack Badges -->
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="bg-[#1DB954] text-black px-2 py-1 rounded text-sm">Vue.js</span>
+          <span class="bg-[#1DB954] text-black px-2 py-1 rounded text-sm">Tailwind CSS</span>
+          <span class="bg-[#1DB954] text-black px-2 py-1 rounded text-sm">Node.js</span>
+          <span class="bg-[#1DB954] text-black px-2 py-1 rounded text-sm">Firebase</span>
+        </div>
+
+        <!-- Links -->
+        <div class="flex gap-4">
+          <a href="#" class="text-[#1DB954] hover:underline font-semibold">Live Demo</a>
+          <a href="#" class="text-[#1DB954] hover:underline font-semibold">GitHub Repo</a>
+          <a href="#" class="text-[#1DB954] hover:underline font-semibold">Case Study</a>
+          <a href="#blog" class="text-[#1DB954] hover:underline font-semibold">Blog Post</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mini Projects Grid (Right) -->
+    <div class="flex-1 max-w-lg">
+      <h3 class="text-[#1DB954] text-xl font-semibold mb-4">More Projects</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-4 flex flex-col items-center">
+          <img src="https://images.pexels.com/photos/3182834/pexels-photo-3182834.jpeg" alt="Mini Project 1" class="w-full h-32 object-cover rounded mb-3 shadow" />
+          <h4 class="text-[#1DB954] font-semibold mb-1">Mini Project 1</h4>
+          <p class="text-gray-400 text-sm text-center">Brief description for filler mini project card.</p>
+        </div>
+        <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-4 flex flex-col items-center">
+          <img src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg" alt="Mini Project 2" class="w-full h-32 object-cover rounded mb-3 shadow" />
+          <h4 class="text-[#1DB954] font-semibold mb-1">Mini Project 2</h4>
+          <p class="text-gray-400 text-sm text-center">Brief description for filler mini project card.</p>
+        </div>
+        <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-4 flex flex-col items-center">
+          <img src="https://images.pexels.com/photos/3183131/pexels-photo-3183131.jpeg" alt="Mini Project 3" class="w-full h-32 object-cover rounded mb-3 shadow" />
+          <h4 class="text-[#1DB954] font-semibold mb-1">Mini Project 3</h4>
+          <p class="text-gray-400 text-sm text-center">Brief description for filler mini project card.</p>
+        </div>
+        <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-4 flex flex-col items-center">
+          <img src="https://images.pexels.com/photos/3182809/pexels-photo-3182809.jpeg" alt="Mini Project 4" class="w-full h-32 object-cover rounded mb-3 shadow" />
+          <h4 class="text-[#1DB954] font-semibold mb-1">Mini Project 4</h4>
+          <p class="text-gray-400 text-sm text-center">Brief description for filler mini project card.</p>
+        </div>
+        <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-4 flex flex-col items-center">
+          <img src="https://images.pexels.com/photos/3184614/pexels-photo-3184614.jpeg" alt="Mini Project 5" class="w-full h-32 object-cover rounded mb-3 shadow" />
+          <h4 class="text-[#1DB954] font-semibold mb-1">Mini Project 5</h4>
+          <p class="text-gray-400 text-sm text-center">Brief description for filler mini project card.</p>
+        </div>
+        <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-4 flex flex-col items-center">
+          <img src="https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg" alt="Mini Project 6" class="w-full h-32 object-cover rounded mb-3 shadow" />
+          <h4 class="text-[#1DB954] font-semibold mb-1">Mini Project 6</h4>
+          <p class="text-gray-400 text-sm text-center">Brief description for filler mini project card.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END: Projects Section -->
 
   <!-- SKILLS & TOOLS -->
-  <section id="skills">
-    <h2>Skills & Tools</h2>
-    <div>
-      <h3>Languages & Frameworks</h3>
-      <ul>
-        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Vue.js</li><li>React</li><li>Node.js</li>
-      </ul>
-    </div>
-    <div>
-      <h3>Dev Tools</h3>
-      <ul>
-        <li>Git</li><li>GitHub</li><li>VS Code</li><li>Postman</li><li>Vite</li><li>NPM</li>
-      </ul>
-    </div>
-    <div>
-      <h3>Design Tools</h3>
-      <ul>
-        <li>Figma</li><li>Adobe XD</li><li>Penpot</li>
-      </ul>
-    </div>
-    <div>
-      <h3>Soft Skills</h3>
-      <ul>
-        <li>Communication</li><li>Collaboration</li><li>Creative Problem Solving</li>
-      </ul>
+  <section id="skills" class="max-w-7xl mx-auto py-8 px-4 bg-[#222326] rounded-3xl mb-10 text-white">
+    <h2 class="text-[#1DB954] text-3xl font-bold mb-6">Skills & Tools</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-4">
+        <h3 class="flex items-center text-[#1DB954] text-xl font-semibold mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-[#1DB954]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
+          </svg>
+          Languages & Frameworks
+        </h3>
+        <div class="flex flex-wrap gap-3">
+          <!-- HTML -->
+          <span class="flex items-center bg-[#1DB954]/20 text-[#1DB954] px-3 py-1 rounded-full text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h16v16H4V4z"/>
+            </svg> HTML
+          </span>
+          <!-- CSS -->
+          <span class="flex items-center bg-[#1DB954]/20 text-[#1DB954] px-3 py-1 rounded-full text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18l-2 18L12 21 5 21 3 3z"/>
+            </svg> CSS
+          </span>
+          <!-- JavaScript -->
+          <span class="flex items-center bg-[#1DB954]/20 text-[#1DB954] px-3 py-1 rounded-full text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l1.09 3.26L17 6l-2.18 2.09L14 11l-2.91-.54L8 11l.18-2.91L6 6l3.91-.74L12 2z"/>
+            </svg> JavaScript
+          </span>
+          <!-- Vue.js -->
+          <span class="flex items-center bg-[#1DB954]/20 text-[#1DB954] px-3 py-1 rounded-full text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" viewBox="0 0 261.76 226.69">
+              <path fill="#1DB954" d="M0 0L130.88 226.69L261.76 0H195.14L130.88 111.69L66.62 0H0Z"/>
+            </svg> Vue.js
+          </span>
+          <!-- React -->
+          <span class="flex items-center bg-[#1DB954]/20 text-[#1DB954] px-3 py-1 rounded-full text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" viewBox="0 0 841.9 595.3">
+              <circle cx="420.9" cy="296.5" r="45.7" fill="#1DB954"/>
+            </svg> React
+          </span>
+          <!-- Node.js -->
+          <span class="flex items-center bg-[#1DB954]/20 text-[#1DB954] px-3 py-1 rounded-full text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" viewBox="0 0 256 288">
+              <path fill="#1DB954" d="M128 0L256 74v140L128 288 0 214V74z"/>
+            </svg> Node.js
+          </span>
+        </div>
+      </div>
+      <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-4">
+        <h3 class="flex items-center text-[#1DB954] text-xl font-semibold mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-[#1DB954]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h16v16H4z"/>
+          </svg>
+          Dev Tools
+        </h3>
+        <div class="flex flex-wrap gap-3">
+          <!-- Git -->
+          <span class="bg-[#1DB954]/20 text-[#1DB954] px-3 py-1 rounded-full text-sm">
+            <i class="fab fa-git-alt"></i> Git
+          </span>
+          <!-- GitHub -->
+          <span class="bg-[#1DB954]/20 text-[#1DB954] px-3 py-1 rounded-full text-sm">
+            <i class="fab fa-github"></i> GitHub
+          </span>
+          <!-- VS Code -->
+          <span class="flex items-center bg-[#1DB954]/20 text-[#1DB954] px-3 py-1 rounded-full text-sm">
+            <i class="fab fa-microsoft mr-1"></i> VS Code
+          </span>
+          <!-- Postman -->
+          <span class="flex items-center bg-[#1DB954]/20 text-[#1DB954] px-3 py-1 rounded-full text-sm">
+            <i class="fab fa-postman mr-1"></i> Postman
+          </span>
+          <!-- Vite -->
+          <span class="flex items-center bg-[#1DB954]/20 text-[#1DB954] px-3 py-1 rounded-full text-sm">
+            <i class="fas fa-bolt mr-1"></i> Vite
+          </span>
+          <!-- NPM -->
+          <span class="flex items-center bg-[#1DB954]/20 text-[#1DB954] px-3 py-1 rounded-full text-sm">
+            <i class="fab fa-npm mr-1"></i> NPM
+          </span>
+          <!-- Jira -->
+          <span class="flex items-center bg-[#1DB954]/20 text-[#1DB954] px-3 py-1 rounded-full text-sm">
+            <!-- Jira Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" viewBox="0 0 256 292">
+              <path fill="#1DB954" d="M0 0h100l56 146 44-76 56 146H156L100 200 56 276 0 0z"/>
+            </svg> Jira
+          </span>
+        </div>
+      </div>
+      <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-4">
+        <h3 class="flex items-center text-[#1DB954] text-xl font-semibold mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-[#1DB954]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536M4 20h4l10-10a2.828 2.828 0 00-4-4L4 16v4z"/>
+          </svg>
+          Design Tools
+        </h3>
+        <div class="flex flex-wrap gap-3">
+          <!-- Figma -->
+          <span class="flex items-center bg-[#1DB954]/20 text-[#1DB954] px-3 py-1 rounded-full text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" viewBox="0 0 24 24">
+              <circle cx="7" cy="5.5" r="3" fill="#1DB954"/>
+              <circle cx="7" cy="12" r="3" fill="#1DB954" fill-opacity="0.7"/>
+              <circle cx="7" cy="18.5" r="3" fill="#1DB954" fill-opacity="0.5"/>
+              <circle cx="13.5" cy="7.5" r="3" fill="#1DB954" fill-opacity="0.8"/>
+              <circle cx="13.5" cy="15.5" r="3" fill="#1DB954" fill-opacity="0.6"/>
+            </svg> Figma
+          </span>
+          <!-- Adobe XD -->
+          <span class="flex items-center bg-[#1DB954]/20 text-[#1DB954] px-3 py-1 rounded-full text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="4" fill="#1DB954" fill-opacity="0.5"/>
+              <text x="12" y="16" text-anchor="middle" font-size="8" fill="#1DB954" font-family="Arial" font-weight="bold">XD</text>
+            </svg> Adobe XD
+          </span>
+          <!-- Penpot -->
+          <span class="flex items-center bg-[#1DB954]/20 text-[#1DB954] px-3 py-1 rounded-full text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9" fill="#1DB954" fill-opacity="0.7"/>
+              <rect x="9" y="9" width="6" height="6" rx="1" fill="#1DB954"/>
+            </svg> Penpot
+          </span>
+        </div>
+      </div>
+      <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-4">
+        <h3 class="flex items-center text-[#1DB954] text-xl font-semibold mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-[#1DB954]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16h6M21 12c0 4.418-4.03 8-9 8s-9-3.582-9-8 4.03-8 9-8 9 3.582 9 8z"/>
+          </svg>
+          Soft Skills
+        </h3>
+        <div class="flex flex-wrap gap-3">
+          <!-- Communication -->
+          <span class="flex items-center bg-[#1DB954]/20 text-[#1DB954] px-3 py-1 rounded-full text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7a2 2 0 012-2h2"/>
+              <circle cx="12" cy="8" r="3" stroke="#1DB954" stroke-width="2" fill="none"/>
+            </svg> Communication
+          </span>
+          <!-- Collaboration -->
+          <span class="flex items-center bg-[#1DB954]/20 text-[#1DB954] px-3 py-1 rounded-full text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M16 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg> Collaboration
+          </span>
+          <!-- Creative Problem Solving -->
+          <span class="flex items-center bg-[#1DB954]/20 text-[#1DB954] px-3 py-1 rounded-full text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <circle cx="12" cy="12" r="10" stroke="#1DB954" stroke-width="2" fill="none"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14s1.5 2 4 2 4-2 4-2"/>
+              <circle cx="9" cy="10" r="1" fill="#1DB954"/>
+              <circle cx="15" cy="10" r="1" fill="#1DB954"/>
+            </svg> Creative Problem Solving
+          </span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- CERTIFICATIONS -->
-  <section id="certifications">
-    <h2>Certifications / Courses</h2>
-    <ul>
-      <li>JavaScript Algorithms and Data Structures – freeCodeCamp (2025)</li>
-      <li>The Complete Vue Developer Bootcamp – Udemy (2024)</li>
-      <li>CS50: Introduction to Computer Science – Harvardx (In Progress)</li>
-    </ul>
+  <!-- EDUCATION & EXPERIENCE -->
+  <section id="edu-exp" class="max-w-7xl mx-auto py-12 px-4 bg-[#222326] rounded-3xl mb-10 text-white">
+    <h2 class="text-[#1DB954] text-3xl font-bold mb-8">Education & Experience</h2>
+    <!-- Education Section -->
+    <h3 class="text-2xl font-semibold text-[#1DB954] mb-4">Education</h3>
+    <div class="flex flex-col md:flex-row gap-6 mb-12">
+      <!-- Education Item 1 -->
+      <div class="flex-1 bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-6">
+        <div class="flex items-start gap-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#1DB954] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422A12.083 12.083 0 0118 19.128M12 14L5.84 10.578A12.083 12.083 0 006 19.128"/>
+          </svg>
+          <div>
+            <h4 class="text-xl font-semibold text-[#1DB954] mb-1">B.S. Computer Science</h4>
+            <p class="text-gray-300 mb-1">California State University, Los Angeles</p>
+            <p class="text-sm text-gray-500">Graduated May 2020</p>
+          </div>
+        </div>
+      </div>
+      <!-- Education Item 2 -->
+      <div class="flex-1 bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-6 opacity-50">
+        <div class="flex items-start gap-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#1DB954] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422A12.083 12.083 0 0118 19.128M12 14L5.84 10.578A12.083 12.083 0 006 19.128"/>
+          </svg>
+          <div>
+            <h4 class="text-xl font-semibold text-[#1DB954] mb-1">M.S. in Artificial Intelligence (planned)</h4>
+            <p class="text-gray-300 mb-1">University of Texas at Austin</p>
+            <p class="text-sm text-gray-500">Spring 2026</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience Section -->
+    <h3 class="text-2xl font-semibold text-[#1DB954] mb-4">Experience</h3>
+    <!-- First row of Experience -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+      <!-- Experience 1 -->
+      <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-6">
+        <!-- existing Manager II content -->
+        <div class="flex items-start gap-4">
+          <!-- Briefcase Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#1DB954] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12v9m-6-9v9m12-9v9M4 7h16M4 7a2 2 0 012-2h12a2 2 0 012 2m-16 0v2a2 2 0 002 2h12a2 2 0 002-2V7"/>
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold text-[#1DB954] mb-1">Manager II, Operations (Logistics)</h3>
+            <p class="text-gray-300 mb-1">Amazon AMZL, Glendale CA</p>
+            <p class="text-sm text-gray-500 mb-2">January 2023 – April 2025</p>
+            <ul class="list-disc list-inside text-gray-400 text-sm space-y-1">
+              <li>Built a real-time web scraping tool reducing reaction time from 3 hours to 15 minutes for daily reporting.</li>
+              <li>Scaled dispatched units by 66%, from 9,450 to 15,750 units in one quarter.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Experience 2 -->
+      <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-6">
+        <!-- existing Manager I content -->
+        <div class="flex items-start gap-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#1DB954] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12v9m-6-9v9m12-9v9M4 7h16M4 7a2 2 0 012-2h12a2 2 0 012 2m-16 0v2a2 2 0 002 2h12a2 2 0 002-2V7"/>
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold text-[#1DB954] mb-1">Manager I, Operations (Logistics)</h3>
+            <p class="text-gray-300 mb-1">Amazon AMZL, Culver City CA</p>
+            <p class="text-sm text-gray-500 mb-2">April 2021 – December 2022</p>
+            <ul class="list-disc list-inside text-gray-400 text-sm space-y-1">
+              <li>Launched Prime Same-Day Shipping, dispatching over 750,000 units in 2023.</li>
+              <li>Reduced concessions by 15.4% through new process flows and training guides.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Experience 3 -->
+      <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-6">
+        <!-- existing FC Associate content -->
+        <div class="flex items-start gap-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#1DB954] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7l6 6-6 6M21 7l-6 6 6 6"/>
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold text-[#1DB954] mb-1">FC Associate I, Direct (Fulfillment)</h3>
+            <p class="text-gray-300 mb-1">Amazon Fresh, Glendale CA</p>
+            <p class="text-sm text-gray-500 mb-2">December 2020 – April 2021</p>
+            <p class="text-gray-400 text-sm">Picked, packed, and staged grocery orders, maintaining food safety and timelines.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Second row of Experience -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Experience 4 -->
+      <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-6">
+        <!-- existing Delivery Associate content -->
+        <div class="flex items-start gap-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#1DB954] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7l6 6-6 6M21 7l-6 6 6 6"/>
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold text-[#1DB954] mb-1">Delivery Associate I, Direct (Logistics)</h3>
+            <p class="text-gray-300 mb-1">Amazon AMZL, Commerce/South Gate CA</p>
+            <p class="text-sm text-gray-500 mb-2">July 2018 – December 2020</p>
+            <p class="text-gray-400 text-sm">Delivered 300+ packages daily and supported fleet management as peer leader.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Experience 5 (if any additional) -->
+      <!-- Use blank or replicate as needed -->
+      <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-6"></div>
+      <!-- Experience 6 (if any) -->
+      <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-6"></div>
+    </div>
   </section>
 
   <!-- TESTIMONIALS -->
-  <section id="testimonials">
-    <h2>Testimonials</h2>
-    <blockquote>
-      "Aaron brought our idea to life exactly how we envisioned. Reliable and creative."
-      <footer>– Client, Small Biz Owner</footer>
-    </blockquote>
-    <blockquote>
-      "Always on top of deadlines, and a great problem solver during our group capstone."
-      <footer>– Teammate, Bootcamp Project</footer>
-    </blockquote>
+  <section id="testimonials" class="max-w-7xl mx-auto py-12 px-4 bg-[#222326] rounded-3xl mb-10 text-white">
+    <h2 class="text-[#1DB954] text-3xl font-bold mb-8 text-center">What Clients & Peers Say</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Testimonial Card 1 -->
+      <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-6 flex flex-col items-start">
+        <!-- Avatar -->
+        <div class="flex items-center mb-4">
+          <img src="https://via.placeholder.com/48" alt="Client Avatar" class="w-12 h-12 rounded-full border-2 border-[#1DB954] mr-3">
+          <div>
+            <h3 class="text-lg font-semibold text-[#1DB954]">Sarah J.</h3>
+            <p class="text-gray-400 text-sm">Founder, Streamline Co.</p>
+          </div>
+        </div>
+        <!-- Quote -->
+        <p class="text-gray-200 italic mb-4">“Aaron brought our idea to life exactly how we envisioned. Reliable, creative, and a pleasure to work with!”</p>
+        <!-- Icon Quote -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#1DB954] self-end" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h7m-7 4h5"/>
+        </svg>
+      </div>
+
+      <!-- Testimonial Card 2 -->
+      <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-6 flex flex-col items-start">
+        <!-- Avatar -->
+        <div class="flex items-center mb-4">
+          <img src="https://via.placeholder.com/48" alt="Peer Avatar" class="w-12 h-12 rounded-full border-2 border-[#1DB954] mr-3">
+          <div>
+            <h3 class="text-lg font-semibold text-[#1DB954]">Mark L.</h3>
+            <p class="text-gray-400 text-sm">Teammate, Web Dev Bootcamp</p>
+          </div>
+        </div>
+        <!-- Quote -->
+        <p class="text-gray-200 italic mb-4">“Always on top of deadlines, quick to problem-solve, and brought great energy to our project team.”</p>
+        <!-- Icon Quote -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#1DB954] self-end" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h7m-7 4h5"/>
+        </svg>
+      </div>
+
+      <!-- Testimonial Card 3 -->
+      <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md p-6 flex flex-col items-start md:col-span-2">
+        <!-- Avatar -->
+        <div class="flex items-center mb-4">
+          <img src="https://via.placeholder.com/48" alt="Client Avatar" class="w-12 h-12 rounded-full border-2 border-[#1DB954] mr-3">
+          <div>
+            <h3 class="text-lg font-semibold text-[#1DB954]">Alex G.</h3>
+            <p class="text-gray-400 text-sm">Product Manager, BetaTech</p>
+          </div>
+        </div>
+        <!-- Quote -->
+        <p class="text-gray-200 italic mb-4">“Aaron’s attention to detail and UI/UX sensibility really elevated our product’s user experience.”</p>
+        <!-- Icon Quote -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#1DB954] self-end" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h7m-7 4h5"/>
+        </svg>
+      </div>
+
+    </div>
   </section>
 
-  <!-- BLOG -->
-  <section id="blog">
-    <h2>Blog / Articles</h2>
-    <ul>
-      <li><a href="#">How I Built My Portfolio with Vue and Vite</a></li>
-      <li><a href="#">Why I Chose JavaScript After a 5-Year Break</a></li>
-      <li><a href="#">5 Tips for Landing Freelance Dev Work in 2025</a></li>
-    </ul>
+  <!-- BLOG / ARTICLES -->
+  <section id="blog" class="max-w-7xl mx-auto py-12 px-4 bg-[#222326] rounded-3xl mb-10 text-white">
+    <h2 class="text-[#1DB954] text-3xl font-bold mb-8 text-center">Latest Articles</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Blog Card 1 -->
+      <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md overflow-hidden flex flex-col">
+        <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg"
+             alt="How I Built My Portfolio" 
+             class="w-full h-40 object-cover">
+        <div class="p-6 flex-1 flex flex-col">
+          <p class="text-gray-500 text-sm mb-2">Jan 15, 2025</p>
+          <h3 class="text-[#1DB954] font-semibold mb-2">How I Built My Portfolio with Vue & Vite</h3>
+          <p class="text-gray-300 text-sm mb-4 flex-1">
+            A step-by-step walkthrough of how I structured and optimized my single-page portfolio site…
+          </p>
+          <a href="#" class="mt-auto text-[#1DB954] hover:underline font-semibold">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Blog Card 2 -->
+      <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md overflow-hidden flex flex-col">
+        <img src="https://images.pexels.com/photos/1181304/pexels-photo-1181304.jpeg"
+             alt="5 Tips for Freelance Dev" 
+             class="w-full h-40 object-cover">
+        <div class="p-6 flex-1 flex flex-col">
+          <p class="text-gray-500 text-sm mb-2">Dec 10, 2024</p>
+          <h3 class="text-[#1DB954] font-semibold mb-2">5 Tips for Landing Freelance Dev Work in 2025</h3>
+          <p class="text-gray-300 text-sm mb-4 flex-1">
+            From pitching to pricing, discover the tactics that helped me secure my first high-value clients…
+          </p>
+          <a href="#" class="mt-auto text-[#1DB954] hover:underline font-semibold">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Blog Card 3 -->
+      <div class="bg-[#222326]/90 backdrop-blur-md rounded-2xl shadow-md overflow-hidden flex flex-col">
+        <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg"
+             alt="Why I Chose JavaScript" 
+             class="w-full h-40 object-cover">
+        <div class="p-6 flex-1 flex flex-col">
+          <p class="text-gray-500 text-sm mb-2">Nov 03, 2024</p>
+          <h3 class="text-[#1DB954] font-semibold mb-2">Why I Chose JavaScript After a 5-Year Break</h3>
+          <p class="text-gray-300 text-sm mb-4 flex-1">
+            A personal look at what drew me back into coding, and why JS was the perfect re-entry point…
+          </p>
+          <a href="#" class="mt-auto text-[#1DB954] hover:underline font-semibold">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Additional cards can be added here -->
+    </div>
   </section>
 
-  <!-- FOOTER / CONTACT -->
-  <footer>
-    <h2>Contact</h2>
-    <p>Email: aaron@email.com</p>
-    <p>LinkedIn: <a href="#">linkedin.com/in/aaron-alvarez</a></p>
-    <p>GitHub: <a href="#">github.com/aaronalvarez</a></p>
-
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" />
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" />
-      <label for="message">Message:</label>
-      <textarea id="message" name="message"></textarea>
-      <button type="submit">Send Me a Message</button>
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="max-w-7xl mx-auto py-12 px-4 bg-[#222326] rounded-3xl mb-10 text-white opacity-50 pointer-events-none">
+    <h2 class="text-[#1DB954] text-3xl font-bold mb-8 text-center">Get in Touch</h2>
+    <p class="text-gray-300 text-center mb-8">Have a project in mind? I'm here to help. Send me a message!</p>
+    <form class="max-w-xl mx-auto grid grid-cols-1 gap-6">
+      <input type="text" id="name" name="name" placeholder="Your Name" class="w-full p-4 bg-[#191414] border border-gray-700 rounded text-white" />
+      <input type="email" id="email" name="email" placeholder="Your Email" class="w-full p-4 bg-[#191414] border border-gray-700 rounded text-white" />
+      <textarea id="message" name="message" placeholder="Your Message" rows="6" class="w-full p-4 bg-[#191414] border border-gray-700 rounded text-white"></textarea>
+      <button type="submit" class="bg-[#1DB954] text-black px-6 py-3 rounded-lg font-semibold hover:bg-[#169443] w-full">Send Message</button>
     </form>
+  </section>
 
-    <p>© 2025 Aaron Alvarez — Built with 💻 HTML + CSS</p>
-    <p><em>⚙️ Converting soon to Vue/React as part of my dev practice 💡</em></p>
+  <!-- FOOTER -->
+  <footer class="relative bg-[#191414] text-gray-400 py-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-4">
+      <!-- Footer Back to Top Link -->
+      <div class="mb-6 text-center">
+        <a href="#hero" class="text-[#1DB954] hover:underline font-semibold">Back to Top</a>
+      </div>
+      <!-- Social Links -->
+      <ul class="flex space-x-6 mb-6 md:mb-0">
+        <li><a href="https://linkedin.com/in/alvarezaaronai" target="_blank" rel="noopener" class="hover:text-white">LinkedIn</a></li>
+        <li><a href="https://github.com/alvarezaaronAI" target="_blank" rel="noopener" class="hover:text-white">GitHub</a></li>
+        <li><a href="mailto:alvarez.a.aaron@gmail.com" class="hover:text-white">Email</a></li>
+      </ul>
+      <!-- Footer Meta -->
+      <div class="text-center text-sm space-y-1">
+        <p>© 2025 Aaron Alvarez — Built with 💻 HTML + CSS</p>
+        <p><em>⚙️ Converting soon to Vue/React as part of my dev practice 💡</em></p>
+      </div>
+      <span class="absolute bottom-2 right-4 text-xs text-[#1DB954] opacity-80">
+        Color theme inspired by Spotify — music to my code!
+      </span>
+    </div>
   </footer>
 
 </body>

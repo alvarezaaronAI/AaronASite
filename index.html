@@ -11,9 +11,17 @@
 
   <!-- NAVIGATION BAR -->
   <header class="sticky top-0 bg-[#191414] p-4 shadow z-50">
-    <nav class="flex justify-between items-center max-w-7xl mx-auto text-white">
+    <nav class="flex justify-between items-center max-w-7xl mx-auto px-4 text-white">
       <div>Aaron Alvarez</div>
-      <ul class="flex space-x-6 text-white">
+      <button id="nav-toggle" class="md:hidden text-gray-400 hover:text-white focus:outline-none">
+        <!-- Hamburger Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <ul id="nav-menu" class="absolute top-full left-0 w-full bg-[#191414] hidden flex justify-center flex-col items-center space-y-2 py-4 text-lg text-white
+        md:static md:flex md:flex-wrap md:flex-row md:justify-center md:space-x-6 md:space-y-0 md:py-0">
         <li><a href="#hero" class="hover:text-[#1DB954]">Home</a></li>
         <li><a href="#about" class="hover:text-[#1DB954]">About</a></li>
         <li><a href="#projects-combined" class="hover:text-[#1DB954]">Projects</a></li>
@@ -83,7 +91,7 @@
   </section>
 
 <!-- ABOUT & TILES SECTION -->
-<div class="max-w-7xl mx-auto mb-10 mt-12">
+<section id="about" class="max-w-7xl mx-auto mb-10 mt-12">
   <div class="flex flex-col md:flex-row items-start gap-8">
     <!-- Left: 3 Article Teasers -->
     <div class="hidden md:grid grid-rows-3 gap-4 w-1/5">
@@ -139,7 +147,7 @@
       ></iframe>
     </div>
   </div>
-</div>
+</section>
 
 
   <!-- START: Projects Section -->
@@ -655,4 +663,11 @@
   </footer>
 
 </body>
+<script>
+  const btn = document.getElementById('nav-toggle');
+  const menu = document.getElementById('nav-menu');
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
 </html>

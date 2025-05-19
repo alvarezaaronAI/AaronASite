@@ -146,16 +146,17 @@ CONTACT SECTION (#contact)
 ──────────────────────────────────────────────────────────────
 FOOTER (relative)
 ──────────────────────────────────────────────────────────────
-Container: bg-[#191414], text-gray-400, py-8, max-w-7xl center, flex col→row md, items-center, px-4  
+Container: bg-[#191414], text-gray-400, py-8, max-w-7xl mx-auto, flex flex-col md:flex-row items-center px-4 space-y-4 md:space-y-0
 
-• Left: “Back to Top” link (green)  
-• Center: Social links: LinkedIn | GitHub | Email (hover white)  
-• Right: Meta text (sm):
-    – © 2025 Aaron Alvarez — Built with HTML + CSS  
-    – “⚙️ Converting soon to Vue/React as part of my dev practice 💡”  
-    – Mobile-only credits & theme notes (green xs, visible md:hidden)  
-• Corner spans (hidden md:block):
-    – bottom-left: Credits: Font Awesome | Tailwind CSS | Spotify Embed | GitHub  
-    – bottom-right: Color theme inspired by Spotify — music to my code!  
-
+• Left: “Back to Top” link (#hero anchor, text-[#1DB954], font-semibold)  
+• Center: 
+    – Social links (inline list, space-x-6):
+      • LinkedIn (external URL, hover:text-white)  
+      • GitHub (external URL, hover:text-white)  
+      • Email (mailto link, hover:text-white)  
+• Right (text-sm text-gray-400 space-y-1):
+    – © 2025 Aaron Alvarez — Built with 💻 HTML + CSS  
+    – ⚙️ Converting soon to Vue/React as part of my dev practice 💡  
+    – Credits: Font Awesome | Tailwind CSS | Spotify Embed | GitHub  
+    – Color theme inspired by Spotify — music to my code!
 ──────────────────────────────────────────────────────────────

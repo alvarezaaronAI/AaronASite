@@ -587,26 +587,27 @@
       <div class="text-center text-sm space-y-1">
         <p>© 2025 Aaron Alvarez — Built with 💻 HTML + CSS</p>
         <p><em>⚙️ Converting soon to Vue/React as part of my dev practice 💡</em></p>
-        <p class="md:hidden text-xs text-[#1DB954]">
-          Credits: <i class="fab fa-font-awesome"></i> Font Awesome |
-                   <i class="fab fa-tailwind"></i> Tailwind CSS |
-                   <i class="fab fa-spotify"></i> Spotify Embed |
-                   <i class="fab fa-github"></i> GitHub
-        </p>
-        <p class="md:hidden text-xs text-[#1DB954]">
-          Color theme inspired by Spotify — music to my code!
-        </p>
+        <div class="block md:hidden">
+          <p class="text-xs text-[#1DB954] opacity-80">
+            Credits: <i class="fab fa-font-awesome"></i> Font Awesome |
+                     <i class="fab fa-tailwind"></i> Tailwind CSS |
+                     <i class="fab fa-spotify"></i> Spotify Embed |
+                     <i class="fab fa-github"></i> GitHub<br>
+            Color theme inspired by Spotify — music to my code!
+          </p>
+        </div>
       </div>
-      <span class="hidden md:absolute md:bottom-2 md:left-4 text-xs text-[#1DB954] opacity-80">
-        Credits: <i class="fab fa-font-awesome"></i> Font Awesome |
-                 <i class="fab fa-tailwind"></i> Tailwind CSS |
-                 <i class="fab fa-spotify"></i> Spotify Embed |
-                 <i class="fab fa-github"></i> GitHub
-      </span>
-      <span class="hidden md:absolute md:bottom-2 md:right-4 text-xs text-[#1DB954] opacity-80">
-        Color theme inspired by Spotify — music to my code!
-      </span>
     </div>
+    <!-- Desktop-only corner credits -->
+    <span class="hidden md:block absolute bottom-2 left-4 text-xs text-[#1DB954] opacity-80">
+      Credits: <i class="fab fa-font-awesome"></i> Font Awesome |
+               <i class="fab fa-tailwind"></i> Tailwind CSS |
+               <i class="fab fa-spotify"></i> Spotify Embed |
+               <i class="fab fa-github"></i> GitHub
+    </span>
+    <span class="hidden md:block absolute bottom-2 right-4 text-xs text-[#1DB954] opacity-80">
+      Color theme inspired by Spotify — music to my code!
+    </span>
   </footer>
 
 </body>

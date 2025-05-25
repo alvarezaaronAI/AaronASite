@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Overview – Aaron Alvarez</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body class="bg-[#191414] text-white font-sans">
+
+  <!-- 1. MINI NAVBAR -->
+  <header id="mini-nav" class="sticky top-0 bg-[#191414] border-b border-gray-800 z-50">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <div class="flex items-center space-x-4">
+        <a href="../index.html" class="text-lg font-semibold hover:underline">Aaron Alvarez</a>
+        <a href="../index.html#projects-combined" class="text-gray-400 hover:text-white">← Back to Projects</a>
+      </div>
+      <button
+        class="md:hidden focus:outline-none"
+        aria-label="Toggle quick-nav"
+        onclick="document.getElementById('quick-nav').classList.toggle('hidden')"
+      >
+        <i class="fas fa-bars fa-lg"></i>
+      </button>
+      <ul id="quick-nav" class="hidden md:flex space-x-6">
+        <li><a href="#timeline-features" class="hover:text-[#1DB954]">Timeline & Features</a></li>
+        <li><a href="#challenge-solution" class="hover:text-[#1DB954]">Challenge</a></li>
+        <li><a href="#visuals" class="hover:text-[#1DB954]">Visuals</a></li>
+        <li><a href="#tech-architecture" class="hover:text-[#1DB954]">Tech</a></li>
+        <li><a href="#metrics" class="hover:text-[#1DB954]">Metrics</a></li>
+        <li><a href="#team" class="hover:text-[#1DB954]">Team</a></li>
+        <li><a href="#cta" class="hover:text-[#1DB954]">Get Started</a></li>
+        <li><a href="#related" class="hover:text-[#1DB954]">Related</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="max-w-5xl mx-auto space-y-16 py-12 px-4">
+    <!-- 2. HERO SECTION -->
+    <section id="hero" class="relative flex items-center justify-center min-h-[750px] py-12 bg-[#191414] scroll-mt-24">
+      <div class="absolute inset-0 w-full h-full">
+        <img src="../assets/images/Brooklyn Bridge.jpg" alt="Brooklyn Bridge" class="w-full h-full object-cover opacity-80">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/50"></div>
+      </div>
+      <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+        <div class="bg-black/60 p-6 rounded-lg">
+          <h1 class="text-5xl md:text-6xl font-extrabold mb-4 text-white">
+            Project Name : Overview 
+          </h1>
+          <p class="text-lg md:text-xl text-gray-200 mb-6">
+            Elevator pitch goes here in one crisp sentence.
+          </p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <span class="bg-[#1DB954] text-black px-3 py-1 rounded-full text-sm">🧑‍🤝‍🧑 12k Users</span>
+            <span class="bg-[#1DB954] text-black px-3 py-1 rounded-full text-sm">🚀 Launched Mar 2025</span>
+            <span class="bg-[#1DB954] text-black px-3 py-1 rounded-full text-sm">🛠️ 6 Tech</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. TIMELINE & FEATURE SPOTLIGHT -->
+    <section id="timeline-features" class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 scroll-mt-24">
+      <!-- Development Timeline (Left) -->
+      <div>
+        <h2 class="text-2xl font-semibold text-white mb-4">Development Timeline</h2>
+        <ul class="border-l-2 border-gray-700 pl-4 text-gray-300 space-y-2 max-h-60 overflow-y-auto">
+          <li><strong>Jan ’25:</strong> Planning & Wireframes</li>
+          <li><strong>Feb ’25:</strong> MVP Development</li>
+          <li><strong>Mar ’25:</strong> Real-Time Sync & Testing</li>
+          <li><strong>Apr ’25:</strong> Beta Release & Feedback</li>
+          <li><strong>May ’25:</strong> Public Launch</li>
+        </ul>
+      </div>
+      <!-- Feature Spotlight (Right) -->
+      <div>
+        <h2 class="text-2xl font-semibold text-white mb-4">Feature Spotlight</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="bg-[#222326] rounded-lg p-4 flex flex-col items-start">
+            <i class="fas fa-sync-alt text-[#1DB954] mb-2"></i>
+            <h3 class="font-semibold text-white">Real-time Updates</h3>
+            <p class="text-gray-300 text-sm">Automatic sync across all devices in under 1 second.</p>
+          </div>
+          <div class="bg-[#222326] rounded-lg p-4 flex flex-col items-start">
+            <i class="fas fa-bell text-[#1DB954] mb-2"></i>
+            <h3 class="font-semibold text-white">Custom Notifications</h3>
+            <p class="text-gray-300 text-sm">Receive alerts for upcoming deadlines and changes.</p>
+          </div>
+          <div class="bg-[#222326] rounded-lg p-4 flex flex-col items-start">
+            <i class="fas fa-chart-line text-[#1DB954] mb-2"></i>
+            <h3 class="font-semibold text-white">Progress Tracking</h3>
+            <p class="text-gray-300 text-sm">Visualize your task completion rates over time.</p>
+          </div>
+          <div class="bg-[#222326] rounded-lg p-4 flex flex-col items-start">
+            <i class="fas fa-user-friends text-[#1DB954] mb-2"></i>
+            <h3 class="font-semibold text-white">Team Collaboration</h3>
+            <p class="text-gray-300 text-sm">Share and assign tasks with your team seamlessly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- 4. PROBLEM ↔ SOLUTION -->
+<section id="challenge-solution" class="space-y-8 scroll-mt-24">
+  <h2 class="text-3xl font-bold text-white text-center">Challenge ↔ Solution</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- Pair 1 -->
+    <div class="bg-[#222326] rounded-lg p-6 flex flex-col items-center text-center space-y-4">
+      <!-- Problem -->
+      <div class="flex items-center">
+        <i class="fas fa-clock text-[#1DB954] mr-2"></i>
+        <h3 class="font-semibold text-lg text-white">Time-Consuming Planning</h3>
+      </div>
+      <p class="text-gray-300">
+        Manually crafting weekly meal plans takes hours each Sunday.
+      </p>
+      <span class="block text-[#1DB954] font-semibold text-sm text-center">Challenge</span>
+      <!-- Arrow Divider -->
+      <div class="flex justify-center my-2">
+        <i class="fas fa-arrow-down text-[#1DB954] text-2xl"></i>
+      </div>
+      <span class="block text-[#1DB954] font-semibold text-sm text-center">Solution</span>
+      <!-- Solution -->
+      <div class="flex items-center mt-4">
+        <i class="fas fa-robot text-[#1DB954] mr-2"></i>
+        <h3 class="font-semibold text-lg text-white">AI Meal Generator</h3>
+      </div>
+      <p class="text-gray-300">
+        Instantly generate a personalized 7-day meal plan based on your preferences.
+      </p>
+    </div>
+
+    <!-- Pair 2 -->
+    <div class="bg-[#222326] rounded-lg p-6 flex flex-col items-center text-center space-y-4">
+      <!-- Problem -->
+      <div class="flex items-center">
+        <i class="fas fa-shopping-cart text-[#1DB954] mr-2"></i>
+        <h3 class="font-semibold text-lg text-white">Forgotten Ingredients</h3>
+      </div>
+      <p class="text-gray-300">
+        You often realize mid-shop that you’ve missed key ingredients.
+      </p>
+      <span class="block text-[#1DB954] font-semibold text-sm text-center">Challenge</span>
+      <!-- Arrow Divider -->
+      <div class="flex justify-center my-2">
+        <i class="fas fa-arrow-down text-[#1DB954] text-2xl"></i>
+      </div>
+      <span class="block text-[#1DB954] font-semibold text-sm text-center">Solution</span>
+      <!-- Solution -->
+      <div class="flex items-center mt-4">
+        <i class="fas fa-list-alt text-[#1DB954] mr-2"></i>
+        <h3 class="font-semibold text-lg text-white">Auto-Shopping List</h3>
+      </div>
+      <p class="text-gray-300">
+        One-tap shopping list compiles all needed items from your meal plan.
+      </p>
+    </div>
+
+    <!-- Pair 3 -->
+    <div class="bg-[#222326] rounded-lg p-6 flex flex-col items-center text-center space-y-4">
+      <!-- Problem -->
+      <div class="flex items-center">
+        <i class="fas fa-notes-medical text-[#1DB954] mr-2"></i>
+        <h3 class="font-semibold text-lg text-white">Dietary Tracking</h3>
+      </div>
+      <p class="text-gray-300">
+        It’s hard to monitor calories and macros across different meals.
+      </p>
+      <span class="block text-[#1DB954] font-semibold text-sm text-center">Challenge</span>
+      <!-- Arrow Divider -->
+      <div class="flex justify-center my-2">
+        <i class="fas fa-arrow-down text-[#1DB954] text-2xl"></i>
+      </div>
+      <span class="block text-[#1DB954] font-semibold text-sm text-center">Solution</span>
+      <!-- Solution -->
+      <div class="flex items-center mt-4">
+        <i class="fas fa-chart-pie text-[#1DB954] mr-2"></i>
+        <h3 class="font-semibold text-lg text-white">Nutrition Dashboard</h3>
+      </div>
+      <p class="text-gray-300">
+        Get real-time macro and calorie breakdown as you log each meal.
+      </p>
+    </div>
+  </div>
+</section>
+
+ <!-- 5. VISUAL WALKTHROUGH -->
+<section id="visuals" class="space-y-6 scroll-mt-24">
+  <h2 class="text-3xl font-semibold text-white text-center">Visual Walkthrough</h2>
+
+  <div
+    class="flex space-x-6 overflow-x-auto snap-x snap-mandatory px-4 py-2"
+    style="-webkit-overflow-scrolling: touch;"
+  >
+    <!-- Slide 1 -->
+    <div class="snap-start flex-shrink-0 w-72 md:w-96">
+      <img
+        src="../assets/images/screen-dashboard.png"
+        alt="Dashboard overview"
+        class="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"
+      />
+      <h3 class="mt-3 font-semibold text-white">Dashboard Overview</h3>
+      <p class="text-gray-400 text-sm">
+        Real-time metrics for tasks completed and upcoming deadlines.
+      </p>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="snap-start flex-shrink-0 w-72 md:w-96">
+      <img
+        src="../assets/images/screen-mobile.png"
+        alt="Task list view"
+        class="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"
+      />
+      <h3 class="mt-3 font-semibold text-white">Task List View</h3>
+      <p class="text-gray-400 text-sm">
+        Filter, sort, and mark tasks directly from the mobile interface.
+      </p>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="snap-start flex-shrink-0 w-72 md:w-96">
+      <img
+        src="../assets/images/screen-settings.png"
+        alt="Settings & Profile"
+        class="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"
+      />
+      <h3 class="mt-3 font-semibold text-white">Settings & Profile</h3>
+      <p class="text-gray-400 text-sm">
+        Customize notifications, themes, and sync preferences.
+      </p>
+    </div>
+
+    <!-- Add more slides as needed… -->
+  </div>
+</section>
+
+    <!-- 6. TECH & ARCHITECTURE -->
+    <section id="tech-architecture" class="space-y-6 scroll-mt-24">
+      <h2 class="text-3xl font-semibold text-white text-center">Tech & Architecture</h2>
+      <div class="flex flex-wrap gap-3 mb-4 justify-center">
+        <span class="bg-[#1DB954] text-black px-3 py-1 rounded-full text-sm">Vue.js</span>
+        <span class="bg-[#1DB954] text-black px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+        <span class="bg-[#1DB954] text-black px-3 py-1 rounded-full text-sm">Node.js</span>
+        <span class="bg-[#1DB954] text-black px-3 py-1 rounded-full text-sm">Firebase</span>
+      </div>
+      <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+        <!-- Client Layer -->
+        <div class="border-2 border-gray-600 bg-[#222326] rounded-lg h-32 flex items-center justify-center px-4">
+          <span class="text-gray-400">Client<br>Vue.js</span>
+        </div>
+        <!-- Arrow -->
+        <i class="fas fa-arrow-down text-[#1DB954] text-2xl block md:hidden"></i>
+        <i class="fas fa-arrow-right text-[#1DB954] text-2xl hidden md:block"></i>
+        <!-- API Layer -->
+        <div class="border-2 border-gray-600 bg-[#222326] rounded-lg h-32 flex items-center justify-center px-4">
+          <span class="text-gray-400">API Server<br>Node.js/Express</span>
+        </div>
+        <!-- Arrow -->
+        <i class="fas fa-arrow-down text-[#1DB954] text-2xl block md:hidden"></i>
+        <i class="fas fa-arrow-right text-[#1DB954] text-2xl hidden md:block"></i>
+        <!-- Realtime Layer -->
+        <div class="border-2 border-gray-600 bg-[#222326] rounded-lg h-32 flex items-center justify-center px-4">
+          <span class="text-gray-400">Realtime Sync<br>Socket.IO</span>
+        </div>
+        <!-- Arrow -->
+        <i class="fas fa-arrow-down text-[#1DB954] text-2xl block md:hidden"></i>
+        <i class="fas fa-arrow-right text-[#1DB954] text-2xl hidden md:block"></i>
+        <!-- Database Layer -->
+        <div class="border-2 border-gray-600 bg-[#222326] rounded-lg h-32 flex items-center justify-center px-4">
+          <span class="text-gray-400">Database<br>Firestore</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 7. METRICS & IMPACT -->
+    <section id="metrics" class="space-y-4 scroll-mt-24">
+      <h2 class="text-3xl font-semibold text-white text-center">Metrics & Impact</h2>
+      <div class="flex flex-wrap justify-center gap-8">
+        <div class="text-center">
+          <p class="text-4xl font-bold text-[#1DB954]">30%<span class="text-lg">↑</span></p>
+          <p class="text-gray-300">Engagement Uplift</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl font-bold text-[#1DB954]">99.9%</p>
+          <p class="text-gray-300">Uptime</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. TEAM & ROLES -->
+    <section id="team" class="space-y-4 scroll-mt-24">
+      <h2 class="text-3xl font-semibold text-white text-center">Team & Roles</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 justify-items-center">
+        <!-- Aaron Alvarez (Lead) -->
+        <a href="../index.html" class="flex items-center space-x-3 bg-[#1DB954] p-3 rounded-lg text-black hover:opacity-90">
+          <div class="h-10 w-10 bg-white rounded-full flex items-center justify-center font-bold">AA</div>
+          <div>
+            <span class="font-semibold">Aaron Alvarez</span>
+            <p class="text-gray-800 text-sm">Lead Developer</p>
+          </div>
+        </a>
+        <!-- Gilberto Placidon -->
+        <div class="flex items-center space-x-3 bg-[#222326] p-3 rounded-lg">
+          <div class="h-10 w-10 bg-gray-600 rounded-full flex items-center justify-center font-bold">GP</div>
+          <div>
+            <a href="https://gilbert-p.github.io/webdev/" target="_blank" class="font-semibold hover:underline">Gilberto Placidon</a>
+            <p class="text-gray-400 text-sm">Full-Stack Engineer</p>
+          </div>
+        </div>
+        <!-- Matthew Segovia -->
+        <div class="flex items-center space-x-3 bg-[#222326] p-3 rounded-lg">
+          <div class="h-10 w-10 bg-gray-600 rounded-full flex items-center justify-center font-bold">MS</div>
+          <div>
+            <a href="#" class="font-semibold hover:underline">Matthew Segovia</a>
+            <p class="text-gray-400 text-sm">UX/UI Designer</p>
+          </div>
+        </div>
+        <!-- Matthew Ramos -->
+        <div class="flex items-center space-x-3 bg-[#222326] p-3 rounded-lg">
+          <div class="h-10 w-10 bg-gray-600 rounded-full flex items-center justify-center font-bold">MR</div>
+          <div>
+            <a href="#" class="font-semibold hover:underline">Matthew Ramos</a>
+            <p class="text-gray-400 text-sm">Backend Developer</p>
+          </div>
+        </div>
+        <!-- Gerardo Granados -->
+        <div class="flex items-center space-x-3 bg-[#222326] p-3 rounded-lg">
+          <div class="h-10 w-10 bg-gray-600 rounded-full flex items-center justify-center font-bold">GG</div>
+          <div>
+            <a href="#" class="font-semibold hover:underline">Gerardo Granados</a>
+            <p class="text-gray-400 text-sm">QA Engineer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. CALLS TO ACTION -->
+    <section id="cta" class="text-center space-y-4 scroll-mt-24">
+      <a href="#" class="inline-block bg-[#1DB954] text-black px-6 py-3 rounded-lg font-semibold hover:bg-green-600">View Live →</a>
+      <a href="#" class="inline-block border border-[#1DB954] px-6 py-3 rounded-lg font-semibold hover:bg-[#1DB954]/20">Read Case Study →</a>
+      <a href="#" class="inline-block border border-[#1DB954] px-6 py-3 rounded-lg font-semibold hover:bg-[#1DB954]/20">Clone Repo →</a>
+    </section>
+
+    <!-- 10. RELATED PROJECTS -->
+    <section id="related" class="space-y-4 scroll-mt-24">
+      <h2 class="text-2xl font-semibold">Related Projects</h2>
+      <div class="flex overflow-x-auto space-x-4 py-2">
+        <div class="min-w-[200px] bg-[#222326] rounded-lg p-4">
+          <img src="https://placehold.co/200x150?text=Related+Project+1" alt="Related Project 1" class="h-24 w-full object-cover rounded mb-2">
+          <h3 class="font-semibold text-[#1DB954]">Related Project 1</h3>
+          <a href="#" class="text-gray-400 text-sm hover:underline">Read More →</a>
+        </div>
+        <div class="min-w-[200px] bg-[#222326] rounded-lg p-4">
+          <img src="https://placehold.co/200x150?text=Related+Project+2" alt="Related Project 2" class="h-24 w-full object-cover rounded mb-2">
+          <h3 class="font-semibold text-[#1DB954]">Related Project 2</h3>
+          <a href="#" class="text-gray-400 text-sm hover:underline">Read More →</a>
+        </div>
+        <div class="min-w-[200px] bg-[#222326] rounded-lg p-4">
+          <img src="https://placehold.co/200x150?text=Related+Project+3" alt="Related Project 3" class="h-24 w-full object-cover rounded mb-2">
+          <h3 class="font-semibold text-[#1DB954]">Related Project 3</h3>
+          <a href="#" class="text-gray-400 text-sm hover:underline">Read More →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 11. FOOTER -->
+  <footer class="relative bg-[#191414] text-gray-400 py-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-4">
+      <!-- Footer Back to Top Link -->
+      <div class="mb-6 text-center">
+        <a href="#hero" class="text-[#1DB954] hover:underline font-semibold">Back to Top</a>
+      </div>
+      <!-- Social Links -->
+      <ul class="flex space-x-6 mb-6 md:mb-0">
+        <li><a href="https://linkedin.com/in/alvarezaaronai" target="_blank" rel="noopener" class="hover:text-white">LinkedIn</a></li>
+        <li><a href="https://github.com/alvarezaaronAI" target="_blank" rel="noopener" class="hover:text-white">GitHub</a></li>
+        <li><a href="mailto:alvarez.a.aaron@gmail.com" class="hover:text-white">Email</a></li>
+      </ul>
+      <!-- Footer Meta -->
+      <div class="text-center text-sm space-y-1">
+        <p>© 2025 Aaron Alvarez — Built with 💻 HTML + CSS</p>
+        <p><em>⚙️ Converting soon to Vue/React as part of my dev practice 💡</em></p>
+        <div class="block md:hidden">
+          <p class="text-xs text-[#1DB954] opacity-80">
+            Credits: <i class="fab fa-font-awesome"></i> Font Awesome |
+                     <i class="fab fa-tailwind"></i> Tailwind CSS |
+                     <i class="fab fa-spotify"></i> Spotify Embed |
+                     <i class="fab fa-github"></i> GitHub<br>
+            Color theme inspired by Spotify — music to my code!
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Desktop-only corner credits -->
+    <span class="hidden md:block absolute bottom-2 left-4 text-xs text-[#1DB954] opacity-80">
+      Credits: <i class="fab fa-font-awesome"></i> Font Awesome |
+               <i class="fab fa-tailwind"></i> Tailwind CSS |
+               <i class="fab fa-spotify"></i> Spotify Embed |
+               <i class="fab fa-github"></i> GitHub
+    </span>
+    <span class="hidden md:block absolute bottom-2 right-4 text-xs text-[#1DB954] opacity-80">
+      Color theme inspired by Spotify — music to my code!
+    </span>
+  </footer>
+
+</body>
+</html>

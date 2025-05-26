@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog Post Title - Aaron Alvarez</title>
+<script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body class="bg-[#191414] text-gray-200">
+ <!-- 1. MINI NAVBAR -->
+ <header id="mini-nav" class="sticky top-0 bg-[#191414] border-b border-gray-800 z-50">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <div class="flex items-center space-x-4">
+        <a href="../index.html" class="text-lg font-semibold hover:underline">Aaron Alvarez</a>
+        <a href="../index.html#blog" class="text-gray-400 hover:text-white">← Back to Blogs</a>
+      </div>
+      <button
+        class="md:hidden focus:outline-none"
+        aria-label="Toggle quick-nav"
+        onclick="document.getElementById('quick-nav').classList.toggle('hidden')"
+      >
+        <i class="fas fa-bars fa-lg"></i>
+      </button>
+      <ul id="quick-nav" class="hidden md:flex space-x-6">
+        <li><a href="#timeline-features" class="hover:text-[#1DB954]">Timeline & Features</a></li>
+        <li><a href="#challenge-solution" class="hover:text-[#1DB954]">Challenge</a></li>
+        <li><a href="#visuals" class="hover:text-[#1DB954]">Visuals</a></li>
+        <li><a href="#tech-architecture" class="hover:text-[#1DB954]">Tech</a></li>
+        <li><a href="#metrics" class="hover:text-[#1DB954]">Metrics</a></li>
+        <li><a href="#team" class="hover:text-[#1DB954]">Team</a></li>
+        <li><a href="#cta" class="hover:text-[#1DB954]">Get Started</a></li>
+        <li><a href="#related" class="hover:text-[#1DB954]">Related</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main class="max-w-5xl mx-auto py-12 px-4 space-y-12">
+
+    <!-- 2. ARTICLE HEADER -->
+    <header>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">Blog Post Title</h1>
+      <p class="text-gray-300 text-sm">
+        By <a href="../author.html" class="text-[#1DB954] hover:underline">Aaron Alvarez</a> &bull; 
+        <time datetime="2024-06-01">June 1, 2024</time> &bull; 
+        <span class="inline-flex space-x-2">
+          <a href="../category/technology.html" class="bg-[#1DB954]/20 text-[#1DB954] px-3 py-1 rounded-full text-xs font-semibold hover:bg-[#1DB954]/30">Technology</a>
+          <a href="../category/webdev.html" class="bg-[#1DB954]/20 text-[#1DB954] px-3 py-1 rounded-full text-xs font-semibold hover:bg-[#1DB954]/30">Web Dev</a>
+        </span>
+      </p>
+    </header>
+
+     <!-- 3. FEATURED IMAGE BANNER -->
+    <section
+      id="featured"
+      class="relative h-48 md:h-64 bg-cover bg-center scroll-mt-24"
+      style="background-image:url('../assets/images/index/Brooklyn Bridge.jpg')"
+    >
+      <div class="absolute inset-0 bg-black/30"></div>
+    </section>
+
+    <!-- 4. INTRO PARAGRAPH -->
+    <section class="prose prose-invert max-w-none mt-8">
+      <p class="text-gray-300">
+        In this post, we’ll dive into how we built a real-time syncing task manager that works offline, scales globally, and makes collaboration a breeze.
+      </p>
+    </section>
+    <!-- 5. Article Body -->
+     <section id="article-body" class="prose prose-invert max-w-none space-y-10 mt-8">
+
+<!-- ===== FORMAT 1: Classic Story/Narrative ===== -->
+<section class="article-format-1 space-y-8 p-6 rounded-lg bg-[#22232b]/80 shadow">
+  <div class="flex items-start mb-4">
+    <img src="../assets/icons/avatar.png" alt="Author avatar" class="w-12 h-12 rounded-full mr-3 float-left shadow" />
+    <div>
+      <blockquote class="border-l-4 pl-4 text-gray-400 italic my-4">
+        “Kick off your blog with a punchy insight or key quote that sets the tone.”
+      </blockquote>
+      <h2 class="text-2xl font-bold text-[#1DB954] mb-2">
+        <i class="fas fa-book-open mr-2 text-[#1DB954]"></i>
+        Introduction
+      </h2>
+      <p>Briefly introduce the main topic and what sparked your interest.</p>
+    </div>
+  </div>
+  <h2 class="text-xl font-semibold text-[#8ff8a1] mt-6">
+    <i class="fas fa-history mr-2 text-[#8ff8a1]"></i>
+    Backstory
+  </h2>
+  <p>Share relevant background, key moments, or turning points in a story-like format.</p>
+  <ul class="list-disc ml-8">
+    <li>Describe a major challenge or obstacle</li>
+    <li>Highlight an “aha” moment or breakthrough</li>
+    <li>Add a surprising or emotional twist</li>
+  </ul>
+  <h2 class="text-xl font-semibold text-[#1DB954] mt-6">
+    <i class="fas fa-lightbulb mr-2 text-[#1DB954]"></i>
+    Lessons Learned
+  </h2>
+  <ul class="list-disc ml-8">
+    <li><strong>Takeaway 1:</strong> What did you realize, with an example?</li>
+    <li><strong>Takeaway 2:</strong> How will you apply this in the future?</li>
+  </ul>
+  <h2 class="text-xl font-semibold text-[#8ff8a1] mt-6">
+    <i class="fas fa-pen-nib mr-2 text-[#8ff8a1]"></i>
+    Final Words
+  </h2>
+  <p>Wrap it up. Call for comments, further reading, or your next step.</p>
+</section>
+
+<!-- ===== FORMAT 2: Step-by-Step Guide ===== -->
+<section class="article-format-2 space-y-8 p-6 rounded-lg bg-[#232927]/80 shadow">
+  <div class="flex items-center justify-between mb-2">
+    <h2 class="text-2xl font-bold text-[#1DB954]">
+      <i class="fas fa-shoe-prints mr-2 text-[#1DB954]"></i>
+      What You’ll Need
+    </h2>
+    <img src="../assets/icons/checklist.png" alt="Checklist icon" class="w-10 h-10 rounded-md shadow ml-2 float-right" />
+  </div>
+  <ul>
+    <li>List required tools, skills, or background knowledge</li>
+    <li>Optional: link resources, downloads, or images</li>
+  </ul>
+  <h2 class="text-xl font-semibold text-[#8ff8a1] mt-6">
+    <i class="fas fa-list-ol mr-2 text-[#8ff8a1]"></i>
+    Step-by-Step
+  </h2>
+  <ol class="list-decimal ml-8 space-y-2">
+    <li>
+      <span class="font-semibold text-[#1DB954]">Step 1:</span> Clear instructions, with a tip if useful
+    </li>
+    <li>
+      <span class="font-semibold text-[#1DB954]">Step 2:</span> Add sub-steps or notes if needed
+    </li>
+    <li>
+      <span class="font-semibold text-[#1DB954]">Step 3:</span> Result, validation, or output
+    </li>
+  </ol>
+  <div class="bg-[#1DB954]/10 rounded px-4 py-2">
+    <i class="fas fa-magic mr-2 text-[#1DB954]"></i>
+    <strong>Pro Tip:</strong> Add an optional bonus or shortcut.
+  </div>
+  <p class="mt-3 italic text-gray-400">
+    <i class="far fa-comments mr-1"></i>
+    Encourage readers to share results or questions!
+  </p>
+</section>
+
+<!-- ===== FORMAT 3: Product/Service Review ===== -->
+<section class="article-format-3 space-y-8 p-6 rounded-lg bg-[#23262b]/80 shadow">
+  <div class="flex items-center mb-4">
+    <img src="../assets/icons/product.png" alt="Product thumbnail" class="w-14 h-14 rounded shadow-lg mr-4 object-cover float-left" />
+    <div>
+      <h2 class="text-2xl font-bold text-[#1DB954] mb-2">
+        <i class="fas fa-box-open mr-2 text-[#1DB954]"></i>
+        First Impressions
+      </h2>
+      <p>What grabbed you about this product/service right away?</p>
+    </div>
+  </div>
+  <div class="flex flex-col md:flex-row gap-6">
+    <div class="md:w-1/2">
+      <h3 class="text-lg font-semibold text-[#1DB954]">
+        <i class="fas fa-thumbs-up mr-1 text-[#1DB954]"></i>
+        Pros
+      </h3>
+      <ul class="list-disc ml-6">
+        <li>Highlight a strong feature or experience</li>
+        <li>Any unique aspect that stands out</li>
+      </ul>
+    </div>
+    <div class="md:w-1/2">
+      <h3 class="text-lg font-semibold text-pink-400">
+        <i class="fas fa-thumbs-down mr-1 text-pink-400"></i>
+        Cons
+      </h3>
+      <ul class="list-disc ml-6">
+        <li>Any frustration, limitation, or missing feature</li>
+        <li>Room for improvement</li>
+      </ul>
+    </div>
+  </div>
+  <h2 class="text-xl font-semibold text-[#8ff8a1] mt-6">
+    <i class="fas fa-users mr-2 text-[#8ff8a1]"></i>
+    Who Should Try It?
+  </h2>
+  <p>Recommend an audience or use-case.</p>
+  <h2 class="text-xl font-semibold text-[#1DB954] mt-6">
+    <i class="fas fa-star mr-2 text-[#FFD700]"></i>
+    Rating / Final Verdict
+  </h2>
+  <p>Give a score (stars, thumbs, or bold text), and a final one-line summary.</p>
+</section>
+
+<!-- ===== FORMAT 4: Personal Journey ===== -->
+<section class="article-format-4 space-y-8 p-6 rounded-lg bg-[#252b22]/80 shadow">
+  <div class="flex items-center justify-between mb-2">
+    <h2 class="text-2xl font-bold text-[#1DB954]">
+      <i class="fas fa-road mr-2 text-[#1DB954]"></i>
+      How It All Began
+    </h2>
+    <img src="../assets/icons/polaroid.png" alt="Travel polaroid" class="w-20 h-16 object-cover rounded-md shadow ml-4 float-right" />
+  </div>
+  <p>Tell a quick story of how your journey started, and your mindset back then.</p>
+  <h3 class="text-lg font-semibold text-[#1DB954] mt-4">
+    <i class="fas fa-mountain mr-1 text-[#1DB954]"></i>
+    Roadblocks & Breakthroughs
+  </h3>
+  <ul class="list-disc ml-8">
+    <li>Biggest challenge and how you faced it</li>
+    <li>Support or inspiration you found</li>
+    <li>Small wins that kept you going</li>
+  </ul>
+  <h3 class="text-lg font-semibold text-[#1DB954] mt-4">
+    <i class="fas fa-seedling mr-1 text-[#1DB954]"></i>
+    Growth
+  </h3>
+  <p>How you’ve changed or grown, and what surprised you.</p>
+  <h3 class="text-lg font-semibold text-[#8ff8a1] mt-4">
+    <i class="fas fa-heart mr-1 text-[#8ff8a1]"></i>
+    Advice for Others
+  </h3>
+  <p>Give encouragement or practical tips for readers on a similar path.</p>
+</section>
+
+<!-- ===== FORMAT 5: FAQ/Resource List ===== -->
+<section class="article-format-5 space-y-8 p-6 rounded-lg bg-[#23221c]/80 shadow">
+  <div class="flex items-center mb-2">
+    <img src="../assets/icons/lightbulb.png" alt="FAQ icon" class="w-10 h-10 rounded mr-2 float-left" />
+    <h2 class="text-2xl font-bold text-[#1DB954] mb-2">
+      <i class="fas fa-question-circle mr-2 text-[#1DB954]"></i>
+      Frequently Asked Questions
+    </h2>
+  </div>
+  <ul>
+    <li><strong>Q1:</strong> State a common question.<br><span class="text-gray-300">A: Answer with a tip or link.</span></li>
+    <li><strong>Q2:</strong> Another practical question.<br><span class="text-gray-300">A: Clear, actionable response.</span></li>
+    <li><strong>Q3:</strong> Something fun, advanced, or controversial.<br><span class="text-gray-300">A: Myth-busting or hot take.</span></li>
+  </ul>
+  <h2 class="text-xl font-semibold text-[#8ff8a1] mt-6">
+    <i class="fas fa-link mr-2 text-[#8ff8a1]"></i>
+    Top Resources
+  </h2>
+  <ul>
+    <li><a href="#" class="underline text-[#8ff8a1]"><i class="fas fa-bookmark mr-1"></i>Resource 1</a> — what it helps with</li>
+    <li><a href="#" class="underline text-[#8ff8a1]"><i class="fas fa-bookmark mr-1"></i>Resource 2</a> — why it’s useful</li>
+  </ul>
+  <p class="italic text-gray-400 mt-3">
+    <i class="fas fa-comment-dots mr-1"></i>
+    Invite readers to submit more questions or resource tips!
+  </p>
+</section>
+
+<!-- ===== FORMAT 6: Modern Tech Tutorial ===== -->
+<section class="article-format-6 space-y-8 p-6 rounded-lg bg-[#1b2532]/80 shadow">
+  <div class="flex items-center justify-between mb-2">
+    <h2 class="text-2xl font-bold text-[#1DB954]">
+      <i class="fas fa-laptop-code mr-2 text-[#1DB954]"></i>
+      What Are We Building?
+    </h2>
+    <img src="../assets/icons/code-window.png" alt="Code window icon" class="w-10 h-10 rounded shadow ml-2 float-right" />
+  </div>
+  <ul>
+    <li>Brief project description</li>
+    <li>Why is it cool or different?</li>
+  </ul>
+  <h2 class="text-xl font-semibold text-[#8ff8a1] mt-6">
+    <i class="fas fa-download mr-2 text-[#8ff8a1]"></i>
+    Setup
+  </h2>
+  <ol class="list-decimal ml-8">
+    <li>Dependencies/tools needed</li>
+    <li>Starter code or repo to clone</li>
+  </ol>
+  <h2 class="text-xl font-semibold text-[#1DB954] mt-6">
+    <i class="fas fa-cogs mr-2 text-[#1DB954]"></i>
+    Walkthrough
+  </h2>
+  <ol class="list-decimal ml-8">
+    <li>Explain a key implementation step (code snippets encouraged)</li>
+    <li>Test and validate</li>
+    <li>Deploy/share your finished project</li>
+  </ol>
+  <div class="bg-[#1DB954]/10 rounded px-4 py-2 mt-2">
+    <i class="fas fa-bug mr-2 text-[#1DB954]"></i>
+    <strong>Common Gotcha:</strong> Warn about a likely bug or issue, and the fix!
+  </div>
+</section>
+
+<!-- ===== FORMAT 7: News/Announcement ===== -->
+<section class="article-format-7 space-y-8 p-6 rounded-lg bg-[#2a2521]/80 shadow">
+  <div class="flex items-center mb-2">
+    <img src="../assets/icons/megaphone.png" alt="Announcement" class="w-10 h-10 rounded mr-2 float-left" />
+    <h2 class="text-2xl font-bold text-[#1DB954] mb-2">
+      <i class="fas fa-bullhorn mr-2 text-[#1DB954]"></i>
+      Big Update!
+    </h2>
+  </div>
+  <p>What’s the news? Is it a feature, partnership, event, or launch?</p>
+  <ul>
+    <li>Date/time or timeline for what’s happening</li>
+    <li>Who should care and why?</li>
+    <li>Key impact or change</li>
+  </ul>
+  <h2 class="text-xl font-semibold text-[#8ff8a1] mt-6">
+    <i class="fas fa-bell mr-2 text-[#8ff8a1]"></i>
+    How Does It Affect Me?
+  </h2>
+  <p>Spell out what readers/users should do or expect next.</p>
+  <h2 class="text-xl font-semibold text-[#1DB954] mt-6">
+    <i class="fas fa-link mr-2 text-[#1DB954]"></i>
+    Get Involved/Learn More
+  </h2>
+  <ul>
+    <li>Link to RSVP, docs, or news</li>
+    <li>Optional: invite feedback or shares</li>
+  </ul>
+</section>
+
+<!-- ===== FORMAT 8: Interview/Guest Q&A ===== -->
+<section class="article-format-8 space-y-8 p-6 rounded-lg bg-[#262835]/80 shadow">
+  <div class="flex items-center justify-between mb-2">
+    <h2 class="text-2xl font-bold text-[#1DB954] mb-2">
+      <i class="fas fa-user-friends mr-2 text-[#1DB954]"></i>
+      Meet [Guest Name]
+    </h2>
+    <img src="../assets/icons/guest-avatar.png" alt="Guest avatar" class="w-14 h-14 rounded-full ml-2 float-right" />
+  </div>
+  <p>Intro: who are they, what’s their expertise, and why is this interview interesting?</p>
+  <h2 class="text-xl font-semibold text-[#8ff8a1] mt-6">
+    <i class="fas fa-question mr-2 text-[#8ff8a1]"></i>
+    Interview
+  </h2>
+  <ul>
+    <li><span class="font-semibold">Q:</span> Kickoff question<br><span class="text-gray-300">A: Their answer or story</span></li>
+    <li><span class="font-semibold">Q:</span> Dig deeper<br><span class="text-gray-300">A: Personal or professional insight</span></li>
+    <li><span class="font-semibold">Q:</span> Quick-fire or “fun” question<br><span class="text-gray-300">A: Lighter answer</span></li>
+  </ul>
+  <h2 class="text-xl font-semibold text-[#1DB954] mt-6">
+    <i class="fas fa-quote-right mr-2 text-[#1DB954]"></i>
+    Best Quote
+  </h2>
+  <blockquote class="border-l-4 pl-4 text-gray-400 italic my-2">
+    “Share a powerful, funny, or memorable quote from your guest.”
+  </blockquote>
+  <p class="italic text-gray-400 mt-2">
+    <i class="fas fa-plug mr-1"></i>
+    Invite readers to connect with the guest (links, socials).
+  </p>
+</section>
+<!-- ===== FORMAT 9: Listicle/Roundup ===== -->
+<section class="article-format-9 space-y-8 p-6 rounded-lg bg-[#322a2e]/80 shadow">
+  <div class="flex items-center mb-2">
+    <img src="../assets/icons/collage.png" alt="Collage thumbnail" class="w-16 h-12 rounded mr-2 float-left" />
+    <h2 class="text-2xl font-bold text-[#1DB954] mb-2">
+      <i class="fas fa-list-ul mr-2 text-[#1DB954]"></i>
+      Top [Number] [Items/Apps/Tips]
+    </h2>
+  </div>
+  <ol class="list-decimal ml-8">
+    <li><span class="font-semibold text-[#1DB954]">Item 1:</span> Why is it #1? Brief highlight or use-case.</li>
+    <li><span class="font-semibold text-[#1DB954]">Item 2:</span> What makes it special?</li>
+    <li><span class="font-semibold text-[#1DB954]">Item 3:</span> A personal story, example, or bonus tip.</li>
+    <li><span class="font-semibold text-[#1DB954]">Item 4:</span> (Optional)</li>
+    <li><span class="font-semibold text-[#1DB954]">Item 5:</span> (Optional)</li>
+  </ol>
+  <div class="bg-[#1DB954]/10 rounded px-4 py-2 mt-4">
+    <i class="fas fa-plus-circle mr-1 text-[#1DB954]"></i>
+    <strong>Bonus:</strong> Shoutout or honorable mention!
+  </div>
+  <p class="italic text-gray-400 mt-2">
+    <i class="fas fa-bullseye mr-1"></i>
+    End with: “What would you add to this list?”
+  </p>
+</section>
+
+<!-- ===== FORMAT 10: Comparison/Versus ===== -->
+<section class="article-format-10 space-y-8 p-6 rounded-lg bg-[#252d32]/80 shadow">
+  <div class="flex items-center justify-between mb-2">
+    <h2 class="text-2xl font-bold text-[#1DB954] mb-2">
+      <i class="fas fa-balance-scale mr-2 text-[#1DB954]"></i>
+      [Product/Service] vs [Product/Service]
+    </h2>
+    <img src="../assets/icons/scales.png" alt="Scales" class="w-12 h-12 rounded shadow ml-2 float-right" />
+  </div>
+  <table class="w-full border border-gray-700 text-sm my-4">
+    <thead>
+      <tr>
+        <th class="border border-gray-700 px-2 py-1">
+          <i class="fas fa-cube text-[#1DB954]"></i> Feature
+        </th>
+        <th class="border border-gray-700 px-2 py-1">
+          <i class="fas fa-audio-description text-[#8ff8a1]"></i> Option A
+        </th>
+        <th class="border border-gray-700 px-2 py-1">
+          <i class="fas fa-b text-[#8ff8a1]"></i> Option B
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="border border-gray-700 px-2 py-1">Ease of Use</td>
+        <td class="border border-gray-700 px-2 py-1">Describe A’s usability</td>
+        <td class="border border-gray-700 px-2 py-1">Describe B’s usability</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-700 px-2 py-1">Cost</td>
+        <td class="border border-gray-700 px-2 py-1">A’s price or value</td>
+        <td class="border border-gray-700 px-2 py-1">B’s price or value</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-700 px-2 py-1">Unique Perk</td>
+        <td class="border border-gray-700 px-2 py-1">Best thing about A</td>
+        <td class="border border-gray-700 px-2 py-1">Best thing about B</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2 class="text-xl font-semibold text-[#8ff8a1] mt-6">
+    <i class="fas fa-question mr-2 text-[#8ff8a1]"></i>
+    Which Should You Choose?
+  </h2>
+  <p>Give a verdict for different readers, or a winner based on use-case.</p>
+</section>
+
+<!-- ===== FORMAT 11: Case Study ===== -->
+<section class="article-format-11 space-y-8 p-6 rounded-lg bg-[#23282b]/80 shadow">
+  <div class="flex items-center mb-2">
+    <img src="../assets/icons/team.png" alt="Teamwork" class="w-10 h-10 rounded mr-2 float-left" />
+    <h2 class="text-2xl font-bold text-[#1DB954] mb-2">
+      <i class="fas fa-user-tie mr-2 text-[#1DB954]"></i>
+      The Challenge
+    </h2>
+  </div>
+  <p>What was the problem or opportunity? Who was involved?</p>
+  <h3 class="text-lg font-semibold text-[#1DB954] mt-4">
+    <i class="fas fa-lightbulb mr-1 text-[#1DB954]"></i>
+    The Solution
+  </h3>
+  <ul class="list-disc ml-8">
+    <li>Step-by-step what was done</li>
+    <li>Any pivots, discoveries, or partners</li>
+  </ul>
+  <h3 class="text-lg font-semibold text-[#8ff8a1] mt-4">
+    <i class="fas fa-chart-line mr-1 text-[#8ff8a1]"></i>
+    Results
+  </h3>
+  <ul>
+    <li>Quantitative win (metrics, sales, speed, etc.)</li>
+    <li>Qualitative impact (feedback, morale, user story)</li>
+  </ul>
+  <div class="bg-[#1DB954]/10 rounded px-4 py-2 mt-4">
+    <i class="fas fa-check-circle mr-2 text-[#1DB954]"></i>
+    <strong>Key Takeaway:</strong> What can others learn?
+  </div>
+</section>
+
+<!-- ===== FORMAT 12: Quick Tips ===== -->
+<section class="article-format-12 space-y-8 p-6 rounded-lg bg-[#222130]/80 shadow">
+  <div class="flex items-center justify-between mb-2">
+    <h2 class="text-2xl font-bold text-[#1DB954] mb-2">
+      <i class="fas fa-bolt mr-2 text-[#FFD700]"></i>
+      Quick Tips for [Skill/Goal]
+    </h2>
+    <img src="../assets/icons/lightning.png" alt="Lightning bolt" class="w-10 h-10 rounded shadow ml-2 float-right" />
+  </div>
+  <ul class="list-disc ml-8">
+    <li>Tip 1: Your fastest actionable win</li>
+    <li>Tip 2: A shortcut or “insider” move</li>
+    <li>Tip 3: A mistake to avoid (brief story or warning)</li>
+  </ul>
+  <div class="bg-[#1DB954]/10 rounded px-4 py-2 mt-4">
+    <i class="fas fa-check mr-2 text-[#1DB954]"></i>
+    <strong>Try This:</strong> Challenge the reader to take action today!
+  </div>
+</section>
+
+<!-- ===== FORMAT 13: Myth-Busting ===== -->
+<section class="article-format-13 space-y-8 p-6 rounded-lg bg-[#2b2325]/80 shadow">
+  <div class="flex items-center mb-2">
+    <img src="../assets/icons/busted-myth.png" alt="Myth busted" class="w-12 h-12 rounded mr-2 float-left" />
+    <h2 class="text-2xl font-bold text-[#1DB954] mb-2">
+      <i class="fas fa-bomb mr-2 text-[#1DB954]"></i>
+      Biggest Myths About [Topic]
+    </h2>
+  </div>
+  <ul>
+    <li>
+      <span class="font-semibold text-red-400">Myth #1:</span> The myth<br>
+      <span class="text-[#8ff8a1]">Reality:</span> The real story or data.
+    </li>
+    <li>
+      <span class="font-semibold text-red-400">Myth #2:</span> The myth<br>
+      <span class="text-[#8ff8a1]">Reality:</span> Correction.
+    </li>
+  </ul>
+  <h3 class="text-lg font-semibold text-[#8ff8a1] mt-6">
+    <i class="fas fa-question-circle mr-1 text-[#8ff8a1]"></i>
+    Why Do These Myths Exist?
+  </h3>
+  <p>Origins, misunderstandings, or historical context.</p>
+  <h3 class="text-lg font-semibold text-[#1DB954] mt-4">
+    <i class="fas fa-check-double mr-1 text-[#1DB954]"></i>
+    How to Get It Right
+  </h3>
+  <ul>
+    <li>Fact-based advice, study, or story</li>
+    <li>Tip for readers to avoid the trap</li>
+  </ul>
+</section>
+
+<!-- ===== FORMAT 14: Timeline / History ===== -->
+<section class="article-format-14 space-y-8 p-6 rounded-lg bg-[#25233a]/80 shadow">
+  <div class="flex items-center justify-between mb-2">
+    <h2 class="text-2xl font-bold text-[#1DB954] mb-2">
+      <i class="fas fa-stream mr-2 text-[#1DB954]"></i>
+      Timeline: [Journey or History of X]
+    </h2>
+    <img src="../assets/icons/timeline.png" alt="Timeline" class="w-14 h-10 rounded shadow ml-2 float-right" />
+  </div>
+  <ol class="relative border-l-2 border-[#1DB954] ml-4">
+    <li class="mb-8 ml-6">
+      <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-[#1DB954] rounded-full text-black font-bold">1</span>
+      <h3 class="font-semibold text-[#1DB954]">
+        <i class="fas fa-flag mr-1 text-[#1DB954]"></i>
+        Origin / Early Days (Year)
+      </h3>
+      <p class="text-gray-300">Describe how it all started—what was the spark, who was involved, and why?</p>
+    </li>
+    <li class="mb-8 ml-6">
+      <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-[#1DB954] rounded-full text-black font-bold">2</span>
+      <h3 class="font-semibold text-[#1DB954]">
+        <i class="fas fa-bolt mr-1 text-[#1DB954]"></i>
+        Key Milestone (Year)
+      </h3>
+      <p class="text-gray-300">Share a pivotal event, breakthrough, or crisis—how did it change the path?</p>
+    </li>
+    <li class="mb-8 ml-6">
+      <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-[#1DB954] rounded-full text-black font-bold">3</span>
+      <h3 class="font-semibold text-[#1DB954]">
+        <i class="fas fa-chart-line mr-1 text-[#1DB954]"></i>
+        Growth & Evolution (Year/Period)
+      </h3>
+      <p class="text-gray-300">What was the phase of rapid growth, transformation, or learning?</p>
+    </li>
+    <li class="ml-6">
+      <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-[#1DB954] rounded-full text-black font-bold">4</span>
+      <h3 class="font-semibold text-[#1DB954]">
+        <i class="fas fa-check mr-1 text-[#1DB954]"></i>
+        Where Things Stand Now
+      </h3>
+      <p class="text-gray-300">Describe the present day—what’s the status, impact, or ongoing challenge?</p>
+    </li>
+  </ol>
+  <div class="bg-[#1DB954]/10 rounded px-4 py-2 mt-4">
+    <i class="fas fa-forward mr-2 text-[#1DB954]"></i>
+    <strong>Future Outlook:</strong> Where do you see this going next? Mention predictions, hopes, or advice for others following this timeline.
+  </div>
+</section>
+
+<!-- ===== FORMAT 15: Deep Dive / Analysis ===== -->
+<section class="article-format-15 space-y-8 p-6 rounded-lg bg-[#252a22]/80 shadow">
+  <div class="flex items-center mb-2">
+    <img src="../assets/icons/search.png" alt="Magnifying glass" class="w-10 h-10 rounded mr-2 float-left" />
+    <h2 class="text-2xl font-bold text-[#1DB954] mb-2">
+      <i class="fas fa-search mr-2 text-[#1DB954]"></i>
+      Deep Dive: [Big Question or Topic]
+    </h2>
+  </div>
+  <p class="mb-2 text-gray-300">
+    Start with a bold statement or burning question—why does this matter, and who is affected?
+  </p>
+  <h3 class="text-lg font-semibold text-[#8ff8a1] mt-4">
+    <i class="fas fa-layer-group mr-1 text-[#8ff8a1]"></i>
+    Core Issues & Perspectives
+  </h3>
+  <ul class="list-disc ml-8">
+    <li><strong>Factor 1:</strong> Break down the first key variable or force at play. Provide stats, real-world examples, or quotes.</li>
+    <li><strong>Factor 2:</strong> Compare/contrast a second perspective, data set, or counter-argument.</li>
+    <li><strong>Factor 3:</strong> Show how they connect, create tension, or shape outcomes.</li>
+  </ul>
+  <h3 class="text-lg font-semibold text-[#1DB954] mt-4">
+    <i class="fas fa-brain mr-1 text-[#1DB954]"></i>
+    Analysis & Synthesis
+  </h3>
+  <p class="text-gray-300">
+    Tie the threads together. What patterns, surprises, or takeaways emerge? What does this reveal that most people miss?
+  </p>
+  <h3 class="text-lg font-semibold text-[#8ff8a1] mt-4">
+    <i class="fas fa-lightbulb mr-1 text-[#8ff8a1]"></i>
+    Implications & Takeaways
+  </h3>
+  <ul class="list-disc ml-8">
+    <li>What should readers or decision-makers do or consider next?</li>
+    <li>Are there actionable tips, future predictions, or cautionary lessons?</li>
+  </ul>
+</section>
+<!-- ===== FORMAT 16: Data-Driven Insight / Report ===== -->
+<section class="article-format-16 space-y-8 p-6 rounded-lg bg-[#232b2d]/80 shadow">
+  <div class="flex items-center justify-between mb-2">
+    <h2 class="text-2xl font-bold text-[#1DB954] mb-2">
+      <i class="fas fa-chart-bar mr-2 text-[#1DB954]"></i>
+      Data Snapshot
+    </h2>
+    <img src="../assets/icons/chart.png" alt="Chart icon" class="w-10 h-10 rounded shadow ml-2 float-right" />
+  </div>
+  <p>Open with a surprising stat or finding. Why does it matter?</p>
+  <table class="w-full border border-gray-700 text-sm my-4">
+    <thead>
+      <tr>
+        <th class="border border-gray-700 px-2 py-1">
+          <i class="fas fa-database mr-1"></i> Metric
+        </th>
+        <th class="border border-gray-700 px-2 py-1">
+          <i class="fas fa-hashtag mr-1"></i> Value
+        </th>
+        <th class="border border-gray-700 px-2 py-1">
+          <i class="fas fa-info-circle mr-1"></i> Context
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="border border-gray-700 px-2 py-1">Page Views</td>
+        <td class="border border-gray-700 px-2 py-1">10,245</td>
+        <td class="border border-gray-700 px-2 py-1">Highest in May</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-700 px-2 py-1">Signups</td>
+        <td class="border border-gray-700 px-2 py-1">670</td>
+        <td class="border border-gray-700 px-2 py-1">+14% MoM</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 class="text-lg font-semibold text-[#1DB954] mt-4">
+    <i class="fas fa-eye mr-1 text-[#1DB954]"></i>
+    What The Data Shows
+  </h3>
+  <ul class="list-disc ml-8">
+    <li>Pattern or anomaly you noticed</li>
+    <li>What factors might explain the results?</li>
+    <li>Any outliers, caveats, or red flags?</li>
+  </ul>
+  <h3 class="text-lg font-semibold text-[#8ff8a1] mt-4">
+    <i class="fas fa-rocket mr-1 text-[#8ff8a1]"></i>
+    Action Steps
+  </h3>
+  <p>Suggest what to do next, or questions to dig deeper.</p>
+</section>
+
+<!-- ===== FORMAT 17: Mistake/Failure Analysis ===== -->
+<section class="article-format-17 space-y-8 p-6 rounded-lg bg-[#2d2329]/80 shadow">
+  <div class="flex items-center mb-2">
+    <img src="../assets/icons/warning.png" alt="Warning" class="w-10 h-10 rounded mr-2 float-left" />
+    <h2 class="text-2xl font-bold text-[#1DB954] mb-2">
+      <i class="fas fa-exclamation-triangle mr-2 text-red-500"></i>
+      What Went Wrong?
+    </h2>
+  </div>
+  <p>Describe the error, flop, or unexpected result honestly.</p>
+  <h3 class="text-lg font-semibold text-[#8ff8a1] mt-4">
+    <i class="fas fa-random mr-1 text-[#8ff8a1]"></i>
+    How It Happened
+  </h3>
+  <ul class="list-disc ml-8">
+    <li>Was it a process, assumption, or communication fail?</li>
+    <li>What warning signs were missed?</li>
+    <li>When did you realize things had gone off track?</li>
+  </ul>
+  <h3 class="text-lg font-semibold text-[#1DB954] mt-4">
+    <i class="fas fa-tools mr-1 text-[#1DB954]"></i>
+    How You Fixed (or Will Fix) It
+  </h3>
+  <p>Explain the steps taken to recover, pivot, or prevent a repeat.</p>
+  <div class="bg-[#1DB954]/10 rounded px-4 py-2 mt-4">
+    <i class="fas fa-lightbulb mr-2 text-[#1DB954]"></i>
+    <strong>Lesson for the Reader:</strong> What can others avoid or learn from your experience?
+  </div>
+</section>
+
+<!-- ===== FORMAT 18: Inspiration/Motivation ===== -->
+<section class="article-format-18 space-y-8 p-6 rounded-lg bg-[#212c26]/80 shadow">
+  <div class="flex items-center justify-between mb-2">
+    <h2 class="text-2xl font-bold text-[#1DB954] mb-2">
+      <i class="fas fa-sparkles mr-2 text-[#FFD700]"></i>
+      Spark of Inspiration
+    </h2>
+    <img src="../assets/icons/sparkle.png" alt="Sparkle icon" class="w-10 h-10 rounded shadow ml-2 float-right" />
+  </div>
+  <blockquote class="border-l-4 pl-4 text-gray-400 italic my-4">
+    “Share the quote, story, or moment that inspired you (or your team).”
+  </blockquote>
+  <h3 class="text-lg font-semibold text-[#8ff8a1] mt-4">
+    <i class="fas fa-bullseye mr-1 text-[#8ff8a1]"></i>
+    Why It Hit Home
+  </h3>
+  <p>Describe why this resonated with you, or how it connects to your mission/goals.</p>
+  <h3 class="text-lg font-semibold text-[#1DB954] mt-4">
+    <i class="fas fa-running mr-1 text-[#1DB954]"></i>
+    How You Took Action
+  </h3>
+  <ul class="list-disc ml-8">
+    <li>First step you took, no matter how small</li>
+    <li>How others reacted or joined in</li>
+    <li>What changed as a result</li>
+  </ul>
+  <div class="bg-[#1DB954]/10 rounded px-4 py-2 mt-4">
+    <i class="fas fa-comments mr-2 text-[#1DB954]"></i>
+    <strong>Challenge:</strong> Invite readers to share what inspires them!
+  </div>
+</section>
+
+<!-- ===== FORMAT 19: “Behind the Scenes” ===== -->
+<section class="article-format-19 space-y-8 p-6 rounded-lg bg-[#292535]/80 shadow">
+  <div class="flex items-center mb-2">
+    <img src="../assets/icons/camera.png" alt="Camera" class="w-10 h-10 rounded mr-2 float-left" />
+    <h2 class="text-2xl font-bold text-[#1DB954] mb-2">
+      <i class="fas fa-video mr-2 text-[#1DB954]"></i>
+      Behind the Scenes
+    </h2>
+  </div>
+  <p>Take the reader backstage—show off the process, team, or setup behind your project.</p>
+  <h3 class="text-lg font-semibold text-[#1DB954] mt-4">
+    <i class="fas fa-calendar-alt mr-1 text-[#1DB954]"></i>
+    The Real Workflow
+  </h3>
+  <ul class="list-disc ml-8">
+    <li>Morning routines, planning, or standups</li>
+    <li>Tools, whiteboards, or messy sketches</li>
+    <li>Team rituals, inside jokes, or challenges</li>
+  </ul>
+  <div class="bg-[#1DB954]/10 rounded px-4 py-2 mt-4">
+    <i class="fas fa-photo-video mr-2 text-[#1DB954]"></i>
+    <strong>Photo/Video Block:</strong> (Embed BTS images or short video clips!)
+  </div>
+  <h3 class="text-lg font-semibold text-[#8ff8a1] mt-4">
+    <i class="fas fa-magic mr-1 text-[#8ff8a1]"></i>
+    What Makes It Work?
+  </h3>
+  <p>Share what’s unique or surprisingly hard/fun about your behind-the-scenes reality.</p>
+</section>
+
+<!-- ===== FORMAT 20: Community Voices/Roundtable ===== -->
+<section class="article-format-20 space-y-8 p-6 rounded-lg bg-[#222c35]/80 shadow">
+  <div class="flex items-center justify-between mb-2">
+    <h2 class="text-2xl font-bold text-[#1DB954] mb-2">
+      <i class="fas fa-comments mr-2 text-[#1DB954]"></i>
+      Community Voices
+    </h2>
+    <img src="../assets/icons/chat.png" alt="Chat bubble" class="w-10 h-10 rounded shadow ml-2 float-right" />
+  </div>
+  <p>Spotlight feedback, user stories, or a roundtable discussion.</p>
+  <h3 class="text-lg font-semibold text-[#8ff8a1] mt-4">
+    <i class="fas fa-quote-left mr-1 text-[#8ff8a1]"></i>
+    Featured Comments
+  </h3>
+  <ul>
+    <li><span class="font-semibold text-[#1DB954]">Jane D.:</span> “This feature changed my workflow!”</li>
+    <li><span class="font-semibold text-[#1DB954]">Arjun S.:</span> “I hit a snag with X, but Y helped me fix it.”</li>
+    <li><span class="font-semibold text-[#1DB954]">You?</span> “Add your perspective here!”</li>
+  </ul>
+  <h3 class="text-lg font-semibold text-[#1DB954] mt-4">
+    <i class="fas fa-users mr-1 text-[#1DB954]"></i>
+    What’s Next for the Community?
+  </h3>
+  <p>Announce upcoming events, features, or ways for readers to get involved or share their story.</p>
+</section>
+<!-- ===== FORMAT 21: Hobbies & What I'm Doing ===== -->
+<section class="article-format-21 space-y-8 p-6 rounded-lg bg-[#25313a]/80 shadow">
+  <div class="flex items-center mb-4">
+    <img src="../assets/icons/hobby.png" alt="Hobby icon" class="w-12 h-12 rounded-full mr-3 float-left shadow" />
+    <h2 class="text-2xl font-bold text-[#1DB954]">
+      <i class="fas fa-gamepad mr-2 text-[#1DB954]"></i>
+      My Current Hobbies
+    </h2>
+  </div>
+  <ul class="grid md:grid-cols-2 gap-4">
+    <li class="flex items-center">
+      <i class="fas fa-camera-retro mr-2 text-[#8ff8a1]"></i>
+      <span>Photography — capturing cityscapes, street life, and my travels.</span>
+    </li>
+    <li class="flex items-center">
+      <i class="fas fa-bicycle mr-2 text-[#8ff8a1]"></i>
+      <span>Cycling & exploring LA bike paths for fun and fitness.</span>
+    </li>
+    <li class="flex items-center">
+      <i class="fas fa-utensils mr-2 text-[#8ff8a1]"></i>
+      <span>Trying new recipes (homemade pasta is my current obsession!)</span>
+    </li>
+    <li class="flex items-center">
+      <i class="fas fa-code mr-2 text-[#8ff8a1]"></i>
+      <span>Building side projects: <span class="italic">always</span> experimenting with new frameworks.</span>
+    </li>
+  </ul>
+  <div class="my-4 text-center">
+    <img src="../assets/images/hobbies/hobby-collage.jpg" alt="Collage of hobbies" class="mx-auto rounded-lg shadow w-1/2" />
+    <span class="block text-gray-400 text-xs mt-2 italic">A glimpse at my weekends in a nutshell.</span>
+  </div>
+  <h3 class="text-lg font-semibold text-[#1DB954] mt-4">
+    <i class="fas fa-calendar-week mr-1 text-[#1DB954]"></i>
+    Recent Projects or Challenges
+  </h3>
+  <ul class="list-disc ml-8">
+    <li>Briefly describe something you built, made, or learned recently.</li>
+    <li>Share a fun fail, unexpected result, or new favorite thing.</li>
+  </ul>
+  <p class="mt-2 text-gray-400 italic">
+    <i class="fas fa-lightbulb mr-1"></i>
+    Always looking for new hobbies to try—drop suggestions in the comments!
+  </p>
+</section>
+<!-- ===== FORMAT 22: Personal Life & Meet My Dogs ===== -->
+<!-- ===== TEMPLATE: Meet My Dogs (Luna & Laika) ===== -->
+<section class="article-format-dogs space-y-8 p-6 rounded-lg bg-[#342a29]/80 shadow">
+  <div class="flex items-center mb-4">
+    <i class="fas fa-dog text-3xl text-[#1DB954] mr-3"></i>
+    <h2 class="text-2xl font-bold text-[#1DB954]">
+      Meet My Dogs!
+    </h2>
+  </div>
+  <div class="grid md:grid-cols-2 gap-8">
+    <!-- Laika Card -->
+    <div class="relative bg-[#221d1c]/70 rounded-xl shadow-lg flex flex-col items-center justify-between p-4">
+      <img src="../assets/images/personal/dogs/Laika.jpeg" alt="Laikalina Madeline Steller I" class="rounded-lg shadow-lg w-full h-56 object-cover mb-3" />
+      <div class="absolute top-3 right-3">
+        <i class="fas fa-heart text-white bg-[#1DB954] rounded-full px-2 py-1 shadow"></i>
+      </div>
+      <div class="text-left w-full px-2 mt-auto">
+        <h3 class="text-lg font-bold text-white">Laikalina Madeline<br>Steller I</h3>
+        <p class="text-gray-300 text-sm mt-1">Playful, snuggly, and loves hoodie weather. If there’s a blanket, she’s in it!</p>
+      </div>
+    </div>
+    <!-- Luna Card -->
+    <div class="relative bg-[#1a2228]/70 rounded-xl shadow-lg flex flex-col items-center justify-between p-4">
+      <img src="../assets/images/personal/dogs/Luna.jpeg" alt="Lunalina Catherine Steller II" class="rounded-lg shadow-lg w-full h-56 object-cover mb-3" />
+      <div class="absolute top-3 right-3">
+        <i class="fas fa-heart text-white bg-[#1DB954] rounded-full px-2 py-1 shadow"></i>
+      </div>
+      <div class="text-left w-full px-2 mt-auto">
+        <h3 class="text-lg font-bold text-white">Lunalina Catherine<br>Steller II</h3>
+        <p class="text-gray-300 text-sm mt-1">The queen of side-eye and cozy beds. If there’s a sunbeam, Luna’s soaking it up.</p>
+      </div>
+    </div>
+  </div>
+  <div class="mt-6 text-gray-400 text-center italic flex items-center justify-center gap-2">
+    <i class="fas fa-bone text-[#1DB954]"></i>
+    Dog parents: tell me your favorite small-dog stories in the comments!
+  </div>
+</section>
+<!-- ===== FORMAT 23: Coffee Hobby ===== -->
+<section class="article-format-coffee space-y-8 p-6 rounded-lg bg-[#241f1b]/80 shadow">
+  <div class="flex items-center mb-4">
+    <img src="../assets/icons/coffee-cup.png" alt="Coffee cup icon" class="w-12 h-12 rounded-full mr-3 float-left shadow" />
+    <h2 class="text-2xl font-bold text-[#c49a6c]">
+      <i class="fas fa-mug-hot mr-2 text-[#c49a6c]"></i>
+      My Life With Coffee
+    </h2>
+  </div>
+  <p class="text-gray-300">It started as a quest for energy, but coffee turned into a full-blown obsession—from single-origin beans to perfecting pour-overs and visiting every indie café in LA.</p>
+  <div class="my-4 flex flex-col md:flex-row items-center gap-4">
+    <img src="../assets/images/hobbies/coffee-pour.jpg" alt="Pouring coffee" class="rounded-lg shadow w-40 h-40 object-cover" />
+    <img src="../assets/images/hobbies/latte-art.jpg" alt="Latte art" class="rounded-lg shadow w-40 h-40 object-cover" />
+  </div>
+  <h3 class="text-lg font-semibold text-[#c49a6c] mt-4 flex items-center">
+    <i class="fas fa-seedling mr-2"></i> What I'm Exploring:
+  </h3>
+  <ul class="list-disc ml-8">
+    <li>Manual brewing methods (V60, Chemex, AeroPress)</li>
+    <li>Latte art—can finally make a heart (sometimes)</li>
+    <li>Bean tastings & learning flavor notes</li>
+    <li>Best coffee shops in Los Angeles</li>
+  </ul>
+  <div class="bg-[#c49a6c]/10 rounded px-4 py-2 mt-4">
+    <i class="fas fa-coffee mr-2 text-[#c49a6c]"></i>
+    <strong>What’s your favorite roast or local spot? Drop tips in the comments!</strong>
+  </div>
+</section>
+<!-- ===== FORMAT 24: Polaroid/Instant Photography ===== -->
+<section class="article-format-polaroid space-y-8 p-6 rounded-lg bg-[#232224]/80 shadow">
+  <div class="flex items-center mb-4">
+    <img src="../assets/icons/polaroid-camera.png" alt="Polaroid camera" class="w-12 h-12 rounded-full mr-3 float-left shadow" />
+    <h2 class="text-2xl font-bold text-[#88e0ef]">
+      <i class="fas fa-camera mr-2 text-[#88e0ef]"></i>
+      Polaroids & Instant Moments
+    </h2>
+  </div>
+  <p class="text-gray-300">Digital is cool, but nothing beats the magic of a real Polaroid—watching a moment appear in your hand, flaws and all.</p>
+  <div class="my-4 flex flex-wrap gap-4">
+    <img src="../assets/images/hobbies/polaroid-collection.jpg" alt="Polaroid photos" class="rounded-lg shadow w-32 h-40 object-cover" />
+    <img src="../assets/images/hobbies/polaroid-selfie.jpg" alt="Polaroid selfie" class="rounded-lg shadow w-32 h-40 object-cover" />
+    <img src="../assets/images/hobbies/polaroid-street.jpg" alt="Street Polaroid" class="rounded-lg shadow w-32 h-40 object-cover" />
+  </div>
+  <h3 class="text-lg font-semibold text-[#88e0ef] mt-4 flex items-center">
+    <i class="fas fa-image mr-2"></i> My Favorite Instant Shots:
+  </h3>
+  <ul class="list-disc ml-8">
+    <li>Friends and family at impromptu get-togethers</li>
+    <li>Street scenes and LA skylines</li>
+    <li>Collecting rare film and testing new cameras</li>
+    <li>Mini photo walls at home</li>
+  </ul>
+  <div class="bg-[#88e0ef]/10 rounded px-4 py-2 mt-4">
+    <i class="fas fa-camera-retro mr-2 text-[#88e0ef]"></i>
+    <strong>Share your own instant snaps or tips for great Polaroids below!</strong>
+  </div>
+</section>
+  </section>
+
+    <!-- 6. AUTHOR BIO -->
+    <section class="flex items-center space-x-6 bg-[#222326] p-6 rounded-lg">
+      <img src="../assets/images/index/Aaron Alvarez.jpeg" alt="Aaron Alvarez" class="w-24 h-24 rounded-full object-cover" />
+      <div>
+        <h3 class="text-xl font-semibold text-white">Aaron Alvarez</h3>
+        <p class="text-gray-400 max-w-xl">Aaron is a passionate web developer and writer who loves sharing knowledge about modern web technologies and best practices.</p>
+        <div class="mt-3 flex space-x-4 text-gray-600 text-lg">
+          <a href="https://twitter.com/aaronalvarez" aria-label="X" class="hover:text-[#1DB954]"><i class="fab fa-x"></i></a>
+          <a href="https://github.com/aaronalvarez" aria-label="GitHub" class="hover:text-white"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/aaronalvarez" aria-label="LinkedIn" class="hover:text-[#1DB954]"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 7. FOOTER -->
+  <footer class="relative bg-[#191414] text-gray-400 py-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-4">
+      <!-- Footer Back to Top Link -->
+      <div class="mb-6 text-center">
+        <a href="#hero" class="text-[#1DB954] hover:underline font-semibold">Back to Top</a>
+      </div>
+      <!-- Social Links -->
+      <ul class="flex space-x-6 mb-6 md:mb-0">
+        <li><a href="https://linkedin.com/in/alvarezaaronai" target="_blank" rel="noopener" class="hover:text-white">LinkedIn</a></li>
+        <li><a href="https://github.com/alvarezaaronAI" target="_blank" rel="noopener" class="hover:text-white">GitHub</a></li>
+        <li><a href="mailto:alvarez.a.aaron@gmail.com" class="hover:text-white">Email</a></li>
+      </ul>
+      <!-- Footer Meta -->
+      <div class="text-center text-sm space-y-1">
+        <p>© 2025 Aaron Alvarez — Built with 💻 HTML + CSS</p>
+        <p><em>⚙️ Converting soon to Vue/React as part of my dev practice 💡</em></p>
+        <div class="block md:hidden">
+          <p class="text-xs text-[#1DB954] opacity-80">
+            Credits: <i class="fab fa-font-awesome"></i> Font Awesome |
+                     <i class="fab fa-tailwind"></i> Tailwind CSS |
+                     <i class="fab fa-spotify"></i> Spotify Embed |
+                     <i class="fab fa-github"></i> GitHub<br>
+            Color theme inspired by Spotify — music to my code!
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Desktop-only corner credits -->
+    <span class="hidden md:block absolute bottom-2 left-4 text-xs text-[#1DB954] opacity-80">
+      Credits: <i class="fab fa-font-awesome"></i> Font Awesome |
+               <i class="fab fa-tailwind"></i> Tailwind CSS |
+               <i class="fab fa-spotify"></i> Spotify Embed |
+               <i class="fab fa-github"></i> GitHub
+    </span>
+    <span class="hidden md:block absolute bottom-2 right-4 text-xs text-[#1DB954] opacity-80">
+      Color theme inspired by Spotify — music to my code!
+    </span>
+  </footer>
+
+</body>
+</html>
